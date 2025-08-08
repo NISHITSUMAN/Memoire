@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/importedCardsRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cardsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/item_card_prototype" />
+
+        <TextView
+                android:id="@+id/cannotExtractAnyCardsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/cannot_extract_any_cards"
+                android:textColor="@color/empty_list"
+                android:textSize="@dimen/text_size_no_search_result"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableTint="@color/empty_list"
+                app:drawableTopCompat="@drawable/ic_round_search_54" />
+
+    </FrameLayout>
+
+    <LinearLayout
+            android:id="@+id/selectionToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/selection_toolbar"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/numberOfSelectedItemsTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunito_bold"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/on_selection_toolbar"
+                android:textSize="@dimen/text_size_selection_toolbar_title"
+                tools:text="43 cards" />
+
+        <ImageButton
+                android:id="@+id/selectAllButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ripple_on_selection_toolbar"
+                android:contentDescription="@string/description_select_all"
+                android:tint="@color/on_selection_toolbar"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_select_all_24" />
+
+        <ImageButton
+                android:id="@+id/unselectAllButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ripple_on_selection_toolbar"
+                android:contentDescription="@string/description_unselect_all"
+                android:tint="@color/on_selection_toolbar"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_remove_done_24" />
+
+        <ImageButton
+                android:id="@+id/selectOnlyNewButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ripple_on_selection_toolbar"
+                android:contentDescription="@string/description_select_only_new"
+                android:tint="@color/on_selection_toolbar"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_mark_only_new" />
+
+    </LinearLayout>
+
+</LinearLayout>

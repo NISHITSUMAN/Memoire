@@ -1,0 +1,247 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/window"
+            android:orientation="horizontal"
+            android:stateListAnimator="@animator/app_bar">
+
+        <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/ripple"
+                android:contentDescription="@string/description_back_button"
+                android:tint="@color/screen_title"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_keyboard_backspace_24" />
+
+        <TextView
+                android:id="@+id/screenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/jura"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/screen_title_walking_mode_settings"
+                android:textColor="@color/screen_title"
+                android:textSize="@dimen/text_size_screen_title"
+                android:textStyle="bold" />
+
+        <ImageButton
+                android:id="@+id/helpButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ripple"
+                android:contentDescription="@string/description_help_button"
+                android:tint="@color/screen_title"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_help_outline_24" />
+
+    </FrameLayout>
+
+    <ScrollView
+            android:id="@+id/contentScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/volumeUpButtonSectionTitle"
+                    style="@style/SettingsSectionTitle"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:text="@string/text_volume_up_button_section" />
+
+            <LinearLayout
+                    android:id="@+id/volumeUpSinglePressButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/volumeUpSinglePressTitle"
+                            style="@style/SettingsItemTitle"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/text_single_press_title" />
+
+                    <TextView
+                            android:id="@+id/selectedVolumeUpSinglePressActionTextView"
+                            style="@style/SettingsItemDescription"
+                            android:fontFamily="@font/nunito_bold"
+                            tools:text="@string/key_gesture_action_mark_as_remember" />
+
+                </LinearLayout>
+
+                <ImageView
+                        style="@style/VolumeKeyIcon"
+                        app:srcCompat="@drawable/ic_wm_volume_up_single_press" />
+
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider" />
+
+            <LinearLayout
+                    android:id="@+id/volumeUpDoublePressButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/volumeUpDoublePressTitle"
+                            style="@style/SettingsItemTitle"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/text_double_press_title" />
+
+                    <TextView
+                            android:id="@+id/selectedVolumeUpDoublePressActionTextView"
+                            style="@style/SettingsItemDescription"
+                            android:fontFamily="@font/nunito_bold"
+                            tools:text="@string/key_gesture_action_move_to_next_card" />
+
+                </LinearLayout>
+
+                <ImageView
+                        style="@style/VolumeKeyIcon"
+                        app:srcCompat="@drawable/ic_wm_volume_up_double_press" />
+
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider" />
+
+            <LinearLayout
+                    android:id="@+id/volumeUpLongPressButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/volumeUpLongPressTitle"
+                            style="@style/SettingsItemTitle"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/text_long_press_title" />
+
+                    <TextView
+                            android:id="@+id/selectedVolumeUpLongPressActionTextView"
+                            style="@style/SettingsItemDescription"
+                            android:fontFamily="@font/nunito_bold"
+                            tools:text="@string/key_gesture_action_speak_question" />
+
+                </LinearLayout>
+
+                <ImageView
+                        style="@style/VolumeKeyIcon"
+                        app:srcCompat="@drawable/ic_wm_volume_up_long_press" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/volumeDownButtonSectionTitle"
+                    style="@style/SettingsSectionTitle"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:text="@string/text_volume_down_button_section" />
+
+            <LinearLayout
+                    android:id="@+id/volumeDownSinglePressButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/volumeDownSinglePressTitle"
+                            style="@style/SettingsItemTitle"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/text_single_press_title" />
+
+                    <TextView
+                            android:id="@+id/selectedVolumeDownSinglePressActionTextView"
+                            style="@style/SettingsItemDescription"
+                            android:fontFamily="@font/nunito_bold"
+                            tools:text="@string/key_gesture_action_mark_as_not_remember" />
+
+                </LinearLayout>
+
+                <ImageView
+                        style="@style/VolumeKeyIcon"
+                        app:srcCompat="@drawable/ic_wm_volume_down_single_press" />
+
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider" />
+
+            <LinearLayout
+                    android:id="@+id/volumeDownDoublePressButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/volumeDownDoublePressTitle"
+                            style="@style/SettingsItemTitle"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/text_double_press_title" />
+
+                    <TextView
+                            android:id="@+id/selectedVolumeDownDoublePressActionTextView"
+                            style="@style/SettingsItemDescription"
+                            android:fontFamily="@font/nunito_bold"
+                            tools:text="@string/key_gesture_action_move_to_previous_card" />
+
+                </LinearLayout>
+
+                <ImageView
+                        style="@style/VolumeKeyIcon"
+                        app:srcCompat="@drawable/ic_wm_volume_down_double_press" />
+
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider" />
+
+            <LinearLayout
+                    android:id="@+id/volumeDownLongPressButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/volumeDownLongPressTitle"
+                            style="@style/SettingsItemTitle"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/text_long_press_title" />
+
+                    <TextView
+                            android:id="@+id/selectedVolumeDownLongPressActionTextView"
+                            style="@style/SettingsItemDescription"
+                            android:fontFamily="@font/nunito_bold"
+                            tools:text="@string/key_gesture_action_speak_answer" />
+
+                </LinearLayout>
+
+                <ImageView
+                        style="@style/VolumeKeyIcon"
+                        app:srcCompat="@drawable/ic_wm_volume_down_long_press" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

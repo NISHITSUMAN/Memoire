@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/selectionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/selection_toolbar"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+    <ImageButton
+            android:id="@+id/cancelSelectionButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ripple_on_selection_toolbar"
+            android:contentDescription="@string/description_cancel_selection"
+            android:tint="@color/on_selection_toolbar"
+            android:tintMode="src_in"
+            app:srcCompat="@drawable/ic_round_clear_24" />
+
+    <TextView
+            android:id="@+id/numberOfSelectedItemsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_bold"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/on_selection_toolbar"
+            android:textSize="@dimen/text_size_selection_toolbar_title"
+            tools:text="24 cards" />
+
+    <ImageButton
+            android:id="@+id/selectAllButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ripple_on_selection_toolbar"
+            android:contentDescription="@string/description_select_all"
+            android:tint="@color/on_selection_toolbar"
+            android:tintMode="src_in"
+            app:srcCompat="@drawable/ic_round_select_all_24" />
+
+    <ImageButton
+            android:id="@+id/moreOptionsButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ripple_on_selection_toolbar"
+            android:contentDescription="@string/description_more_options"
+            android:tint="@color/on_selection_toolbar"
+            android:tintMode="src_in"
+            app:srcCompat="@drawable/ic_round_more_vert_24" />
+
+</LinearLayout>

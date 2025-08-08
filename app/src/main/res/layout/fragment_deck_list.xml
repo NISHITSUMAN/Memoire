@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/deckListRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="presentation.screen.home.DeckListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/decksPreviewRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_deck_preview" />
+
+    <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    <TextView
+            android:id="@+id/emptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/no_matching_decks"
+            android:textColor="@color/empty_list"
+            android:textSize="@dimen/text_size_no_search_result"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:drawableTint="@color/empty_list"
+            app:drawableTopCompat="@drawable/ic_round_search_54" />
+
+    <TextView
+            android:id="@+id/noDecksTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/no_decks"
+            android:textColor="@color/empty_list"
+            android:textSize="@dimen/text_size_no_search_result"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:drawableTint="@color/empty_list"
+            app:drawableTopCompat="@drawable/ic_round_view_carousel_64" />
+
+</FrameLayout>

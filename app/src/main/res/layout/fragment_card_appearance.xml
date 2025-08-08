@@ -1,0 +1,354 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+    <LinearLayout
+            android:id="@+id/screenFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <FrameLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/window"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:stateListAnimator="@animator/app_bar">
+
+            <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/ripple"
+                    android:contentDescription="@string/description_back_button"
+                    android:tint="@color/screen_title"
+                    android:tintMode="src_in"
+                    app:srcCompat="@drawable/ic_round_keyboard_backspace_24" />
+
+            <TextView
+                    android:id="@+id/screenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jura"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/screen_title_card_appearance"
+                    android:textColor="@color/screen_title"
+                    android:textSize="@dimen/text_size_screen_title"
+                    android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/contentScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/example_bottom_sheet_peek_height"
+                    android:orientation="vertical">
+
+                <LinearLayout style="@style/SettingsSurface">
+
+                    <TextView
+                            style="@style/SettingsTitleOnSettingsSurface"
+                            android:text="@string/title_question_field"
+                            app:drawableStartCompat="@drawable/ic_question_field" />
+
+                    <View style="@style/DividerOnSettingsSurface" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="24dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="24dp"
+                            android:paddingBottom="12dp">
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="@string/text_alignment"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_settings_item_title" />
+
+                        <ImageButton
+                                android:id="@+id/alignQuestionToEdgeButton"
+                                android:layout_width="72dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/button_card_appearance_left"
+                                android:stateListAnimator="@animator/button_in_card_appearance"
+                                android:tint="@color/button_in_card_appearance"
+                                android:tintMode="src_in"
+                                app:srcCompat="@drawable/ic_round_format_align_left_24" />
+
+                        <ImageButton
+                                android:id="@+id/alignQuestionToCenterButton"
+                                android:layout_width="72dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="-1.5dp"
+                                android:background="@drawable/button_card_appearance_right"
+                                android:stateListAnimator="@animator/button_in_card_appearance"
+                                android:tint="@color/button_in_card_appearance"
+                                android:tintMode="src_in"
+                                app:srcCompat="@drawable/ic_round_format_align_center_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="24dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="24dp"
+                            android:paddingBottom="12dp">
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="@string/text_size"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_settings_item_title" />
+
+                        <TextView
+                                android:id="@+id/questionTextSizeButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:background="@drawable/button_card_text_size"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="center_vertical"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_card_appearance_text_size_edittext"
+                                tools:text="19 sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/SettingsSurface">
+
+                    <TextView
+                            style="@style/SettingsTitleOnSettingsSurface"
+                            android:text="@string/title_answer_field"
+                            app:drawableStartCompat="@drawable/ic_answer_field" />
+
+                    <View style="@style/DividerOnSettingsSurface" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="24dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="24dp"
+                            android:paddingBottom="12dp">
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="@string/text_alignment"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_settings_item_title" />
+
+                        <ImageButton
+                                android:id="@+id/alignAnswerToEdgeButton"
+                                android:layout_width="72dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/button_card_appearance_left"
+                                android:stateListAnimator="@animator/button_in_card_appearance"
+                                android:tint="@color/button_in_card_appearance"
+                                android:tintMode="src_in"
+                                app:srcCompat="@drawable/ic_round_format_align_left_24" />
+
+                        <ImageButton
+                                android:id="@+id/alignAnswerToCenterButton"
+                                android:layout_width="72dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="-1.5dp"
+                                android:background="@drawable/button_card_appearance_right"
+                                android:stateListAnimator="@animator/button_in_card_appearance"
+                                android:tint="@color/button_in_card_appearance"
+                                android:tintMode="src_in"
+                                app:srcCompat="@drawable/ic_round_format_align_center_24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="24dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="24dp"
+                            android:paddingBottom="12dp">
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="@string/text_size"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_settings_item_title" />
+
+
+                        <TextView
+                                android:id="@+id/answerTextSizeButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:background="@drawable/button_card_text_size"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="center_vertical"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_card_appearance_text_size_edittext"
+                                tools:text="17 sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/SettingsSurface">
+
+                    <TextView
+                            style="@style/SettingsTitleOnSettingsSurface"
+                            android:text="@string/title_common"
+                            app:drawableStartCompat="@drawable/ic_question_answer_field" />
+
+                    <View style="@style/DividerOnSettingsSurface" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="24dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="24dp"
+                            android:paddingBottom="12dp">
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="@string/text_opacity_in_light_theme"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_settings_item_title" />
+
+
+                        <TextView
+                                android:id="@+id/textOpacityInLightThemeButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:background="@drawable/button_card_text_size"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="center_vertical"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_card_appearance_text_size_edittext"
+                                tools:text="60 %" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal"
+                            android:paddingStart="24dp"
+                            android:paddingTop="12dp"
+                            android:paddingEnd="24dp"
+                            android:paddingBottom="12dp">
+
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="@string/text_opacity_in_dark_theme"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_settings_item_title" />
+
+
+                        <TextView
+                                android:id="@+id/textOpacityInDarkThemeButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:background="@drawable/button_card_text_size"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="center_vertical"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:textColor="@color/text_medium_emphasis"
+                                android:textSize="@dimen/text_size_card_appearance_text_size_edittext"
+                                tools:text="67 %" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/exampleFragmentContainerView"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardappearance.example.CardAppearanceExampleFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="CardAppearanceExampleFragment"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="@dimen/example_bottom_sheet_peek_height"
+            app:behavior_skipCollapsed="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

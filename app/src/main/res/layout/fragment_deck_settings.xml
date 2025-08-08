@@ -1,0 +1,284 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <com.odnovolov.forgetmenot.presentation.screen.deckeditor.decksettings.preset.PresetView
+                android:id="@+id/presetView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="16dp" />
+
+        <TextView
+                android:id="@+id/generalSectionTitle"
+                style="@style/SettingsSectionTitle"
+                android:text="@string/deck_settings_section_general" />
+
+        <LinearLayout
+                android:id="@+id/randomButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_random_order" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/randomOrderTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_random_order" />
+
+                <TextView
+                        android:id="@+id/selectedRandomOrderTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="On" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <View style="@style/SettingsDivider" />
+
+        <LinearLayout
+                android:id="@+id/pronunciationButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_pronunciation" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/pronunciationTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_pronunciation" />
+
+                <TextView
+                        android:id="@+id/selectedPronunciationTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="English (A), Ukranian" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <View style="@style/SettingsDivider" />
+
+        <LinearLayout
+                android:id="@+id/cardInversionButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_card_inversion" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/cardInversionTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_card_inversion" />
+
+                <TextView
+                        android:id="@+id/selectedCardInversionTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="Off" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <View style="@style/SettingsDivider" />
+
+        <LinearLayout
+                android:id="@+id/questionDisplayButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_question_display" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/questionDisplayTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_question_display" />
+
+                <TextView
+                        android:id="@+id/selectedQuestionDisplayTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="On" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/exerciseSectionTitle"
+                style="@style/SettingsSectionTitle"
+                android:text="@string/deck_settings_section_exercise" />
+
+        <LinearLayout
+                android:id="@+id/testingMethodButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_testing_method" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/testingMethodTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_testing_method" />
+
+                <TextView
+                        android:id="@+id/selectedTestingMethodTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="Self testing" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <View style="@style/SettingsDivider" />
+
+        <LinearLayout
+                android:id="@+id/intervalsButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_intervals" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/intervalsTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_intervals" />
+
+                <TextView
+                        android:id="@+id/selectedIntervalsTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="8h • 2d • 7d • 21d • 2m • 6m" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <View style="@style/SettingsDivider" />
+
+        <LinearLayout
+                android:id="@+id/gradingButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_grading" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/gradingTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_grading" />
+
+                <TextView
+                        android:id="@+id/selectedGradingTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="On first answer: [Correct: +1, Wrong: -1],  On repeated answer: [Correct: Do not change, Wrong: -1]" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <View style="@style/SettingsDivider" />
+
+        <LinearLayout
+                android:id="@+id/motivationalTimerButton"
+                style="@style/SettingsItemButton">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_timer" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/motivationalTimerTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_motivational_timer" />
+
+                <TextView
+                        android:id="@+id/selectedMotivationalTimerTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="15 sec." />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/autoplaySectionTitle"
+                style="@style/SettingsSectionTitle"
+                android:text="@string/deck_settings_section_autoplay" />
+
+        <LinearLayout
+                android:id="@+id/pronunciationPlanButton"
+                style="@style/SettingsItemButton"
+                android:layout_marginBottom="16dp">
+
+            <ImageView
+                    style="@style/SettingsIcon"
+                    app:srcCompat="@drawable/icon_pronunciation_plan" />
+
+            <LinearLayout style="@style/SettingsTextColumn">
+
+                <TextView
+                        android:id="@+id/pronunciationPlanTitle"
+                        style="@style/SettingsItemTitle"
+                        android:text="@string/deck_settings_item_pronunciation_plan" />
+
+                <TextView
+                        android:id="@+id/selectedPronunciationPlanTextView"
+                        style="@style/SettingsItemDescription"
+                        tools:text="Q 2s A 1s" />
+
+            </LinearLayout>
+
+            <ImageView style="@style/SettingsItemNavigationIcon" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

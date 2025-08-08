@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/importedTextEditorRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editorFrame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+                android:id="@+id/editorScrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/errorLineView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <com.brackeys.ui.editorkit.widget.TextProcessor
+                        android:id="@+id/editor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="top|start"
+                        android:textColor="@color/text_medium_emphasis" />
+
+                <TextView
+                        android:id="@+id/editOffTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="32dp"
+                        android:drawablePadding="8dp"
+                        android:gravity="center"
+                        android:text="@string/text_file_edit_off"
+                        android:textColor="@color/empty_list"
+                        android:textSize="@dimen/text_size_no_search_result"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:drawableTint="@color/empty_list"
+                        app:drawableTopCompat="@drawable/ic_edit_off_54"
+                        tools:visibility="visible" />
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+                android:id="@+id/errorLineView"
+                android:layout_width="4dp"
+                android:layout_height="0dp"
+                android:alpha="0.9"
+                android:background="@color/issue"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/errorButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        <TextView
+                android:id="@+id/errorButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:alpha="0.9"
+                android:background="@drawable/background_source_text_error_button"
+                android:fontFamily="@font/comfortaa"
+                android:paddingStart="32dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/text_label"
+                android:textSize="@dimen/text_size_card_label"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="3 errors"
+                tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+            android:id="@+id/controlPanelScroll"
+            style="@style/AppTheme.AppBarOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/control_panel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/charsetButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/background_outlined_button_on_dark"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/icon_on_control_panel"
+                    android:textSize="@dimen/text_size_file_import_screen_control_panel_button"
+                    app:drawableEndCompat="@drawable/ic_round_expand_more_24"
+                    app:drawableTint="@color/icon_on_control_panel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="UTF-8" />
+
+            <TextView
+                    android:id="@+id/encodingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_encoding_label"
+                    android:paddingStart="6dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="1dp"
+                    android:text="@string/label_encoding"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_label"
+                    android:textSize="@dimen/text_size_file_import_screen_label_for_control_panel_button"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/charsetButton"
+                    app:layout_constraintEnd_toEndOf="@+id/charsetButton"
+                    app:layout_constraintStart_toStartOf="@+id/charsetButton"
+                    app:layout_constraintTop_toTopOf="@+id/charsetButton" />
+
+            <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fileFormatFragment"
+                    android:name="com.odnovolov.forgetmenot.presentation.screen.cardsimport.cardsfile.sourcetext.fileformat.FileFormatFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/charsetButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout="@layout/fragment_file_format" />
+
+            <ImageButton
+                    android:id="@+id/undoButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ripple_on_control_panel"
+                    android:contentDescription="@string/description_undo_button"
+                    android:tint="@color/icon_on_control_panel_selector_enabled_disabled"
+                    android:tintMode="src_in"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/fileFormatFragment"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_round_undo_24" />
+
+            <ImageButton
+                    android:id="@+id/redoButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/ripple_on_control_panel"
+                    android:contentDescription="@string/description_redo_button"
+                    android:tint="@color/icon_on_control_panel_selector_enabled_disabled"
+                    android:tintMode="src_in"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/undoButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_round_redo_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

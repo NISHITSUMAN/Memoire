@@ -1,0 +1,243 @@
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/fragment_about_scene">
+
+    <FrameLayout
+            android:id="@+id/appBarSurface"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:background="@color/app_bar_about_screen"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/ripple_on_selection_toolbar"
+                android:contentDescription="@string/description_back_button"
+                android:elevation="4dp"
+                android:tint="@android:color/white"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_keyboard_backspace_24" />
+
+    </FrameLayout>
+
+    <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/description_app_logo"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/slogan"
+            app:layout_constraintEnd_toStartOf="@+id/app_name"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/app_name"
+            app:srcCompat="@drawable/ic_app_logo" />
+
+    <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:elevation="4dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_about_screen_app_name"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/slogan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/app_logo"
+            app:layout_constraintTop_toTopOf="@id/appBarSurface"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+            android:id="@+id/slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            android:text="@string/app_slogan"
+            android:textColor="#E7D900"
+            android:textSize="@dimen/text_size_about_screen_slogan"
+            android:textStyle="bold"
+            android:transformPivotX="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/appBarSurface"
+            app:layout_constraintStart_toStartOf="@id/app_name"
+            app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/aboutScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarSurface">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/surface"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/appVersionTextView"
+                        style="@style/AboutItem"
+                        app:drawableStartCompat="@drawable/ic_round_code_20"
+                        tools:text="v1.2.0" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:id="@+id/developerButton"
+                        style="@style/AboutItem"
+                        android:text="@string/about_item_developer"
+                        app:drawableStartCompat="@drawable/ic_round_copyright_20" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:id="@+id/sourceCodeButton"
+                        style="@style/AboutItem"
+                        android:text="@string/about_item_source_code"
+                        app:drawableStartCompat="@drawable/ic_github_20" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                <TextView
+                        android:id="@+id/privacyPolicyButton"
+                        style="@style/AboutItem"
+                        android:text="@string/about_item_privacy_policy"
+                        app:drawableStartCompat="@drawable/ic_round_verified_user_20" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/forgetmenotBriefDescriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/forgetmenot_brief_description"
+                    android:textColor="@color/text_medium_emphasis"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_size_description" />
+
+            <TextView
+                    android:id="@+id/developer_story_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="16dp"
+                    android:text="@string/developer_story_title"
+                    android:textColor="@color/text_medium_emphasis"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_size_about_screen_section_title"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/developerStoryTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/developer_story"
+                    android:textColor="@color/text_medium_emphasis"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_size_description"
+                    android:textStyle="italic" />
+
+            <TextView
+                    android:id="@+id/translations_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:padding="16dp"
+                    android:text="@string/translations_title"
+                    android:textColor="@color/text_medium_emphasis"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_size_about_screen_section_title"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/thanksToTranslatorsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/thanks_to_translators"
+                    android:textColor="@color/text_medium_emphasis"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/text_size_description"
+                    android:textStyle="italic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/translationRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_app_translation" />
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/supportAppButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:gravity="center"
+                    android:outlineAmbientShadowColor="@color/accent"
+                    android:outlineSpotShadowColor="@color/accent"
+                    android:stateListAnimator="@animator/material_button"
+                    android:text="@string/text_support_app_button"
+                    android:textAllCaps="false"
+                    android:textColor="@color/on_accent"
+                    android:textSize="@dimen/text_size_floating_button"
+                    app:backgroundTint="@color/accent"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/ic_round_favorite_24"
+                    app:iconGravity="start"
+                    app:iconPadding="8dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/on_accent"
+                    app:rippleColor="@color/ripple_on_accent" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

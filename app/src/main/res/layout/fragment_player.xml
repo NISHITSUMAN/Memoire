@@ -1,0 +1,256 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="presentation.screen.player.view.PlayerFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:visibility="gone" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/playerViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            <TextView
+                    android:id="@+id/noCardsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="@string/no_cards_to_play"
+                    android:textColor="@color/empty_list"
+                    android:textSize="@dimen/text_size_no_search_result"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:drawableTint="@color/empty_list"
+                    app:drawableTopCompat="@drawable/ic_round_play_disabled_64"
+                    tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/goBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:backgroundTint="@color/accent"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:outlineAmbientShadowColor="@color/accent"
+                    android:outlineSpotShadowColor="@color/accent"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:stateListAnimator="@animator/material_button"
+                    android:text="@string/button_go_back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/on_accent"
+                    android:textSize="@dimen/text_size_floating_button"
+                    android:visibility="gone"
+                    app:cornerRadius="30dp"
+                    app:rippleColor="@color/ripple_on_accent" />
+
+        </FrameLayout>
+
+        <HorizontalScrollView
+                android:id="@+id/controlPanelScroll"
+                style="@style/AppTheme.AppBarOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@color/control_panel">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/gradeButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/grade_button"
+                        android:contentDescription="@string/description_grade_button"
+                        android:elevation="14dp"
+                        android:gravity="center"
+                        android:textColor="@color/text_grade"
+                        android:textSize="@dimen/text_size_grade"
+                        android:visibility="invisible"
+                        tools:text="0" />
+
+                <ImageButton
+                        android:id="@+id/markAsLearnedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ripple_on_control_panel"
+                        android:contentDescription="@string/description_mark_as_learned_button"
+                        android:tint="@color/icon_on_control_panel"
+                        android:tintMode="src_in"
+                        app:srcCompat="@drawable/ic_mark_as_learned" />
+
+                <FrameLayout
+                        android:id="@+id/speakFrame"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                    <ImageButton
+                            android:id="@+id/speakButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple_on_control_panel"
+                            android:contentDescription="@string/description_speak_button"
+                            android:visibility="invisible"
+                            app:srcCompat="@drawable/ic_round_volume_up_24"
+                            tools:tint="@android:color/white"
+                            tools:visibility="visible" />
+
+                    <ProgressBar
+                            android:id="@+id/speakProgressBar"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:indeterminate="true"
+                            android:indeterminateTint="@color/icon_on_control_panel"
+                            android:indeterminateTintMode="src_in"
+                            android:visibility="invisible"
+                            tools:visibility="visible" />
+
+                </FrameLayout>
+
+                <ImageButton
+                        android:id="@+id/editDeckSettingsButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ripple_on_control_panel"
+                        android:contentDescription="@string/description_edit_deck_settings"
+                        android:tint="@color/icon_on_control_panel"
+                        android:tintMode="src_in"
+                        app:srcCompat="@drawable/ic_round_build_24" />
+
+                <ImageButton
+                        android:id="@+id/editCardButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ripple_on_control_panel"
+                        android:contentDescription="@string/description_edit_card"
+                        android:tint="@color/icon_on_control_panel"
+                        android:tintMode="src_in"
+                        app:srcCompat="@drawable/ic_round_edit_24" />
+
+                <ImageButton
+                        android:id="@+id/searchButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ripple_on_control_panel"
+                        android:contentDescription="@string/description_search_button"
+                        android:tint="@color/icon_on_control_panel"
+                        android:tintMode="src_in"
+                        app:srcCompat="@drawable/ic_round_search_24" />
+
+                <FrameLayout
+                        android:id="@+id/lapsButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ripple_on_control_panel"
+                        android:contentDescription="@string/description_laps_button">
+
+                    <ImageView
+                            android:id="@+id/lapsIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/description_laps_button"
+                            android:tint="@color/icon_on_control_panel"
+                            android:tintMode="src_in"
+                            tools:srcCompat="@drawable/ic_laps" />
+
+                    <TextView
+                            android:id="@+id/lapsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/icon_on_control_panel"
+                            android:textSize="10dp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:ignore="SpUsage"
+                            tools:text="1"
+                            tools:visibility="visible" />
+
+                </FrameLayout>
+
+                <ImageButton
+                        android:id="@+id/helpButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="14dp"
+                        android:background="@drawable/ripple_on_control_panel"
+                        android:contentDescription="@string/description_help_button"
+                        android:tint="@color/icon_on_control_panel"
+                        android:tintMode="src_in"
+                        app:srcCompat="@drawable/ic_round_help_outline_24" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <com.odnovolov.forgetmenot.presentation.common.customview.ProgressBarForViewPager2
+            android:id="@+id/progressBarForViewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="50dp"
+            tools:background="@color/accent" />
+
+    <TextView
+            android:id="@+id/positionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="43dp"
+            android:background="@drawable/background_card_position"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/on_accent"
+            android:textSize="@dimen/text_size_progress_in_exercise"
+            android:textStyle="bold"
+            tools:text="12/35" />
+
+    <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="-12dp"
+            android:layout_marginBottom="-12dp"
+            android:background="@drawable/background_play_button"
+            android:contentDescription="@string/description_pause_button"
+            android:outlineAmbientShadowColor="@color/accent"
+            android:outlineSpotShadowColor="@color/accent"
+            android:stateListAnimator="@animator/material_button"
+            android:tint="@color/play_button_icon"
+            android:tintMode="src_in"
+            app:srcCompat="@drawable/ic_pause_28" />
+
+</FrameLayout>

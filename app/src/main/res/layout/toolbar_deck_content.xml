@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <LinearLayout
+            android:id="@+id/exportButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+        <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="14dp"
+                android:background="@drawable/background_export_button"
+                android:tint="@color/icon_export"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_unarchive_28" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/nunito_bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="@string/button_export"
+                android:textColor="@color/text_export_icon"
+                android:textSize="@dimen/text_size_deck_content_screen_toolbar_button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/searchButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+        <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="14dp"
+                android:background="@drawable/background_search_button"
+                android:tint="@color/icon_search"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_search_28" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/nunito_bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="@string/button_search"
+                android:textColor="@color/text_search_icon"
+                android:textSize="@dimen/text_size_deck_content_screen_toolbar_button" />
+
+    </LinearLayout>
+
+</LinearLayout>

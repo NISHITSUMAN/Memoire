@@ -1,0 +1,34 @@
+import com.soywiz.klock.DateTime;
+
+CREATE TABLE DeckDb (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    createdAt INTEGER AS DateTime NOT NULL,
+    lastTestedAt INTEGER AS DateTime,
+    exercisePreferenceId INTEGER NOT NULL,
+    isPinned INTEGER AS Boolean NOT NULL
+);
+
+insert:
+INSERT INTO DeckDb VALUES ?;
+
+selectAll:
+SELECT * FROM DeckDb;
+
+updateName:
+UPDATE DeckDb SET name = ? WHERE id = ?;
+
+updateLastTestedAt:
+UPDATE DeckDb SET lastTestedAt = ? WHERE id = ?;
+
+updateExercisePreferenceId:
+UPDATE DeckDb SET exercisePreferenceId = ? WHERE id = ?;
+
+updateIsPinned:
+UPDATE DeckDb SET isPinned = ? WHERE id = ?;
+
+delete:
+DELETE FROM DeckDb WHERE id = ?;
+
+exists:
+SELECT EXISTS (SELECT * FROM DeckDb WHERE id = ?);

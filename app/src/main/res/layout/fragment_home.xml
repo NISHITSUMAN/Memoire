@@ -1,0 +1,267 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/homeRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="presentation.screen.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/window"
+            android:stateListAnimator="@animator/app_bar">
+
+        <FrameLayout
+                android:id="@+id/searchFrame"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_search_frame_selector"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <ImageButton
+                        android:id="@+id/drawerButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ripple_borderless_colored"
+                        android:contentDescription="@string/description_drawer_button"
+                        android:tint="@color/accent"
+                        android:tintMode="src_in"
+                        app:srcCompat="@drawable/ic_round_drawer_24" />
+
+                <EditText
+                        android:id="@+id/searchEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:hint="@string/hint_search_edittext"
+                        android:imeOptions="actionNone"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="@color/text_input"
+                        android:textColorHint="@color/hint"
+                        android:textSize="@dimen/text_size_search_edittext" />
+
+                <ImageButton
+                        android:id="@+id/pasteButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ripple_borderless_colored"
+                        android:contentDescription="@string/description_paste_button"
+                        android:tint="@color/accent"
+                        android:tintMode="src_in"
+                        app:srcCompat="@drawable/ic_content_paste_24" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                    android:id="@+id/searchProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_gravity="bottom"
+                    android:indeterminate="true"
+                    android:scaleY="1.5"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+            <TextView
+                    android:id="@+id/deckListTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/jura"
+                    android:maxLines="3"
+                    android:textColor="@color/screen_title"
+                    android:textSize="@dimen/text_size_home_screen_deck_list_title"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/addCardsFragment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/deck_list_title_decks_available_for_exercise" />
+
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+            <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/addCardsFragment"
+                    android:name="com.odnovolov.forgetmenot.presentation.screen.home.addcards.AddCardsFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:tag="AddCardsFragment"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@id/guideline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout="@layout/fragment_add_cards" />
+
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/searchTabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorColor="@color/accent"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/accent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/toolbar_item_selection" />
+
+        <Space
+                android:id="@+id/antiJumpingView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/homePager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:layout="@layout/fragment_deck_list" />
+
+    <LinearLayout
+            android:id="@+id/progressBarFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/frame_reading_files"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+        <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/progress_bar_reading_files"
+                android:textColor="@color/text_medium_emphasis"
+                android:textSize="@dimen/text_size_progress_bar" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomButtonsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="true"
+            app:layout_behavior="com.odnovolov.forgetmenot.presentation.common.MoveUpwardBehavior">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/autoplayButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/nunito_extrabold"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="@color/accent"
+                android:outlineSpotShadowColor="@color/accent"
+                android:stateListAnimator="@animator/material_button"
+                android:text="@string/text_autoplay_button"
+                android:textAllCaps="false"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/text_size_floating_button"
+                app:backgroundTint="@color/light_floating_button"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_play_20"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:iconTint="@color/accent"
+                app:iconTintMode="src_in"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/exerciseButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="220dp"
+                app:rippleColor="@color/accent"
+                app:strokeColor="@color/accent"
+                app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/exerciseButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nunito_extrabold"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="@color/accent"
+                android:outlineSpotShadowColor="@color/accent"
+                android:stateListAnimator="@animator/material_button"
+                android:text="@string/text_exercise_button"
+                android:textAllCaps="false"
+                android:textColor="@color/on_accent"
+                android:textSize="@dimen/text_size_floating_button"
+                app:backgroundTint="@color/accent"
+                app:cornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/autoplayButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="220dp"
+                app:rippleColor="@color/ripple_on_accent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

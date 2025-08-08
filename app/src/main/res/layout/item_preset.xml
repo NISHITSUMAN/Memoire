@@ -1,0 +1,62 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+    <FrameLayout
+            android:id="@+id/setPresetButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_selectable_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/presetNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunito_bold"
+            android:maxLines="1"
+            android:textColor="@color/on_add_cards_popup"
+            android:textSize="@dimen/text_size_preset_popup_preset_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/renamePresetButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Default" />
+
+    <ImageView
+            android:id="@+id/renamePresetButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ripple"
+            android:contentDescription="@string/description_rename_preset_button"
+            android:padding="8dp"
+            android:tint="@color/on_add_cards_popup"
+            android:tintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deletePresetButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_outline_edit_24" />
+
+    <ImageView
+            android:id="@+id/deletePresetButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ripple"
+            android:contentDescription="@string/description_delete_preset_button"
+            android:padding="8dp"
+            android:tint="@color/on_add_cards_popup"
+            android:tintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_round_delete_outline_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

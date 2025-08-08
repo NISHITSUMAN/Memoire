@@ -1,0 +1,123 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/background_dialog"
+        tools:layout_gravity="center"
+        tools:layout_margin="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/removePresetTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:textColor="@color/text_high_emphasis"
+                android:textSize="@dimen/text_size_dialog_title"
+                app:drawableStartCompat="@drawable/ic_round_delete_outline_24"
+                app:drawableTint="@color/title_icon_in_dialog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Deleting preset 'Germany vocabulary'" />
+
+        <TextView
+                android:id="@+id/topTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:padding="16dp"
+                android:text="@string/top_dialog_text_remove_preset"
+                android:textColor="@color/text_medium_emphasis"
+                android:textSize="@dimen/text_size_dialog_description"
+                app:layout_constraintBottom_toTopOf="@+id/removePresetRecycler"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/removePresetTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/removePresetRecycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_affected_deck_recycler"
+                android:overScrollMode="never"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/bottomTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topTextView"
+                tools:listitem="@layout/item_affected_deck_when_preset_is_removed" />
+
+        <TextView
+                android:id="@+id/bottomTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:padding="16dp"
+                android:text="@string/bottom_dialog_text_remove_preset"
+                android:textColor="@color/text_medium_emphasis"
+                android:textSize="@dimen/text_size_dialog_description"
+                app:layout_constraintBottom_toTopOf="@id/cancelRemovingButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/removePresetRecycler" />
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancelRemovingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/dialog_cancel_button"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="@android:string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/text_dialog_button_undesirable"
+                android:textSize="@dimen/text_size_dialog_cancel_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bottomTextView" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/nunito_extrabold"
+                android:outlineAmbientShadowColor="@color/issue"
+                android:outlineSpotShadowColor="@color/issue"
+                android:stateListAnimator="@animator/material_button"
+                android:text="@string/button_delete"
+                android:textAllCaps="false"
+                android:textColor="@color/text_dialog_ok_button"
+                android:textSize="@dimen/text_size_dialog_ok_button"
+                app:backgroundTint="@color/issue"
+                app:cornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/cancelRemovingButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancelRemovingButton"
+                app:layout_constraintTop_toTopOf="@+id/cancelRemovingButton"
+                app:rippleColor="@color/ripple_on_accent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/deckChooserRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="presentation.screen.deckchooser.DeckChooserFragment">
+
+    <LinearLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/selection_toolbar"
+            android:descendantFocusability="beforeDescendants"
+            android:elevation="4dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageButton
+                    android:id="@+id/cancelButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ripple_on_selection_toolbar"
+                    android:contentDescription="@string/description_cancel_selection"
+                    android:tint="@color/on_selection_toolbar"
+                    android:tintMode="src_in"
+                    app:srcCompat="@drawable/ic_round_clear_24" />
+
+            <TextView
+                    android:id="@+id/screenTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/on_selection_toolbar"
+                    android:textSize="@dimen/text_size_selection_toolbar_title"
+                    tools:text="@string/screen_title_choose_a_deck_to_import_cards_to" />
+
+        </LinearLayout>
+
+        <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_search_edittext_in_deck_chooser"
+                android:fontFamily="@font/nunito_bold"
+                android:hint="@string/hint_search_edittext"
+                android:imeOptions="actionNone"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:textColorHint="@color/hint"
+                android:textSize="@dimen/text_size_search_edittext" />
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:id="@+id/deckListFrame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/decksPreviewRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/item_deck_preview" />
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        <TextView
+                android:id="@+id/emptyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/no_matching_decks"
+                android:textColor="@color/empty_list"
+                android:textSize="@dimen/text_size_no_search_result"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableTint="@color/empty_list"
+                app:drawableTopCompat="@drawable/ic_round_search_54" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addDeckButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="24dp"
+                android:contentDescription="@string/description_add_deck_button"
+                android:visibility="invisible"
+                app:backgroundTint="@color/accent"
+                app:rippleColor="@color/ripple_on_accent"
+                app:srcCompat="@drawable/ic_round_add_24"
+                app:tint="@color/on_accent"
+                tools:visibility="visible" />
+
+    </FrameLayout>
+
+</LinearLayout>

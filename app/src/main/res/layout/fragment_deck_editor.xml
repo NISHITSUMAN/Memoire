@@ -1,0 +1,144 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/deckEditorRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/window"
+                android:stateListAnimator="@animator/app_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/outgoingPartOfAppbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                <ImageButton
+                        android:id="@+id/backButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/ripple"
+                        android:contentDescription="@string/description_back_button"
+                        android:tint="@color/screen_title"
+                        android:tintMode="src_in"
+                        app:layout_constraintBottom_toBottomOf="@id/screenTitleTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/screenTitleTextView"
+                        app:srcCompat="@drawable/ic_round_keyboard_backspace_24" />
+
+                <TextView
+                        android:id="@+id/screenTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/jura"
+                        android:textColor="@color/screen_title"
+                        android:textSize="@dimen/text_size_screen_title"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/screen_title_deck_editor" />
+
+                <TextView
+                        android:id="@+id/deckNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/background_outlined_button"
+                        android:fontFamily="@font/nunito_bold"
+                        android:paddingStart="24dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="24dp"
+                        android:paddingBottom="16dp"
+                        android:textColor="@color/text_high_emphasis"
+                        android:textSize="@dimen/text_size_deck_editor_screen_deck_name"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/screenTitleTextView"
+                        tools:text="Английский №8" />
+
+                <TextView
+                        android:id="@+id/nameLabelTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="56dp"
+                        android:background="@drawable/background_name_label"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_label"
+                        android:textSize="@dimen/text_size_file_import_screen_deck_label"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/deckNameTextView"
+                        app:layout_constraintEnd_toEndOf="@+id/deckNameTextView"
+                        app:layout_constraintTop_toTopOf="@+id/deckNameTextView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/deckEditorTabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:background="@null"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorColor="@color/accent"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/accent" />
+
+            <include layout="@layout/toolbar_item_selection" />
+
+            <Space
+                    android:id="@+id/antiJumpingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/deckEditorViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addCardButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="24dp"
+                android:contentDescription="@string/description_add_card_button"
+                android:visibility="invisible"
+                app:backgroundTint="@color/accent"
+                app:rippleColor="@color/ripple_on_accent"
+                app:srcCompat="@drawable/ic_round_add_24"
+                app:tint="@color/on_accent"
+                tools:visibility="visible" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

@@ -1,0 +1,232 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/ExerciseCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ScrollView
+                    android:id="@+id/questionToolbarScrollView"
+                    android:layout_width="50dp"
+                    android:layout_height="0dp"
+                    android:background="@color/toolbar_qa_editor"
+                    app:layout_constraintBottom_toTopOf="@id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <ImageButton
+                            android:id="@+id/questionPasteButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_paste_button"
+                            android:tint="@color/icon_on_surface"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_content_paste_24" />
+
+                    <ImageButton
+                            android:id="@+id/questionClearButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_clear_button"
+                            android:tint="@color/icon_on_surface"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_round_clear_24" />
+
+                    <ImageButton
+                            android:id="@+id/questionUndoButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_undo_button"
+                            android:tint="@color/icon_on_surface_selector"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_round_undo_24" />
+
+                    <ImageButton
+                            android:id="@+id/questionRedoButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_redo_button"
+                            android:tint="@color/icon_on_surface_selector"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_round_redo_24" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toTopOf="@id/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/questionToolbarScrollView"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <com.odnovolov.forgetmenot.presentation.common.customview.undoredoedittext.UndoRedoEditText
+                        android:id="@+id/questionEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/hint_question_edittext"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="24dp"
+                        android:textColorHint="@color/hint"
+                        android:textSize="@dimen/text_size_question"
+                        tools:text="Эти люди привычны к тяжелой работе." />
+
+            </ScrollView>
+
+            <View
+                    android:id="@+id/divider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_on_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                    android:id="@+id/answerScrollView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/answerToolbarScrollView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider">
+
+                <com.odnovolov.forgetmenot.presentation.common.customview.undoredoedittext.UndoRedoEditText
+                        android:id="@+id/answerEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="@string/hint_answer_edittext"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:paddingStart="16dp"
+                        android:paddingTop="24dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="16dp"
+                        android:textColorHint="@color/hint"
+                        android:textSize="@dimen/text_size_answer"
+                        tools:text="Эти люди привычны к тяжелой работе." />
+
+            </ScrollView>
+
+            <ScrollView
+                    android:id="@+id/answerToolbarScrollView"
+                    android:layout_width="50dp"
+                    android:layout_height="0dp"
+                    android:background="@color/toolbar_qa_editor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <ImageButton
+                            android:id="@+id/answerPasteButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_paste_button"
+                            android:tint="@color/icon_on_surface"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_content_paste_24" />
+
+                    <ImageButton
+                            android:id="@+id/answerClearButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_clear_button"
+                            android:tint="@color/icon_on_surface"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_round_clear_24" />
+
+                    <ImageButton
+                            android:id="@+id/answerUndoButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_undo_button"
+                            android:tint="@color/icon_on_surface_selector"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_round_undo_24" />
+
+                    <ImageButton
+                            android:id="@+id/answerRedoButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/ripple"
+                            android:contentDescription="@string/description_redo_button"
+                            android:tint="@color/icon_on_surface_selector"
+                            android:tintMode="src_in"
+                            app:srcCompat="@drawable/ic_round_redo_24" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ImageButton
+                    android:id="@+id/invertCardButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_invert_card"
+                    android:contentDescription="@string/description_invert_card_button"
+                    app:layout_constraintBottom_toBottomOf="@id/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/divider" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/cardLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="top|center_horizontal"
+                android:alpha="0"
+                android:background="@drawable/background_card_label"
+                android:enabled="false"
+                android:fontFamily="@font/comfortaa"
+                android:gravity="center_vertical"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:stateListAnimator="@animator/editable_card_label"
+                android:textColor="@color/text_label"
+                android:textSize="@dimen/text_size_card_label"
+                android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

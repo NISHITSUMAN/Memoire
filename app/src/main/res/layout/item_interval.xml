@@ -1,0 +1,72 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middleLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+            android:id="@+id/gradeTextView"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/oval"
+            android:elevation="14dp"
+            android:gravity="center"
+            android:textColor="@color/text_grade"
+            android:textSize="@dimen/text_size_grade"
+            app:layout_constraintEnd_toEndOf="@id/indicatorLine"
+            app:layout_constraintStart_toStartOf="@id/indicatorLine"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:backgroundTint="@color/grade_unsatisfactory"
+            tools:outlineAmbientShadowColor="@color/grade_unsatisfactory_bright"
+            tools:outlineSpotShadowColor="@color/grade_unsatisfactory_bright"
+            tools:text="0" />
+
+    <View
+            android:id="@+id/indicatorLine"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="75dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/middleLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:barrierMargin="50dp"
+            app:constraint_referenced_ids="middleLine" />
+
+    <TextView
+            android:id="@+id/intervalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_outlined_button"
+            android:fontFamily="@font/nunito_bold"
+            android:paddingStart="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/text_medium_emphasis"
+            android:textSize="@dimen/text_size_intervals_screen_interval_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/gradeTextView"
+            tools:text="8 hours" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

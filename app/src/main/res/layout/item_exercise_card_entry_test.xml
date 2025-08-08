@@ -1,0 +1,200 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/ExerciseCard">
+
+        <LinearLayout
+                android:id="@+id/cardLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+            <FrameLayout
+                    android:id="@+id/questionFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/transparent">
+
+                <ScrollView
+                        android:id="@+id/questionScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:visibility="invisible"
+                        tools:visibility="visible">
+
+                    <com.odnovolov.forgetmenot.presentation.common.customview.TextViewWithObservableSelection
+                            android:id="@+id/questionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoLink="web"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:textColor="@color/text_on_card_default"
+                            android:textIsSelectable="true"
+                            android:textSize="@dimen/text_size_question"
+                            tools:text="Эти люди привычны к тяжелой работе." />
+
+                </ScrollView>
+
+                <TextView
+                        android:id="@+id/showQuestionButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/curtain"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:text="@string/text_show_question_button"
+                        android:textColor="@color/text_curtain_selector"
+                        android:textSize="@dimen/text_size_exercise_show_button"
+                        android:visibility="gone" />
+
+            </FrameLayout>
+
+            <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_on_card" />
+
+            <ScrollView
+                    android:id="@+id/hintScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    android:visibility="gone"
+                    tools:visibility="gone">
+
+                <com.odnovolov.forgetmenot.presentation.common.customview.TextViewWithObservableSelection
+                        android:id="@+id/hintTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:textColor="@color/text_on_card_default"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/text_size_answer" />
+
+            </ScrollView>
+
+            <View
+                    android:id="@+id/hintDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_on_card"
+                    android:visibility="gone"
+                    tools:visibility="gone" />
+
+            <ScrollView
+                    android:id="@+id/answerInputScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:fillViewport="true">
+
+                <EditText
+                        android:id="@+id/answerEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:gravity="top|start"
+                        android:hint="@string/hint_answer_edittext"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="80dp"
+                        android:textColorHint="@color/text_curtain_selector"
+                        android:textSize="@dimen/text_size_answer" />
+
+            </ScrollView>
+
+            <ScrollView
+                    android:id="@+id/answerScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:fillViewport="true"
+                    android:visibility="gone">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <com.odnovolov.forgetmenot.presentation.common.customview.TextViewWithObservableSelection
+                            android:id="@+id/wrongAnswerTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:textColor="@color/wrong_answer_selector"
+                            android:textIsSelectable="true"
+                            android:textSize="@dimen/text_size_answer"
+                            android:visibility="gone"
+                            tools:text="excape"
+                            tools:visibility="visible" />
+
+                    <com.odnovolov.forgetmenot.presentation.common.customview.TextViewWithObservableSelection
+                            android:id="@+id/correctAnswerTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:textColor="@color/correct_answer_selector"
+                            android:textIsSelectable="true"
+                            android:textSize="@dimen/text_size_answer"
+                            tools:text="escape" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/cardLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="top|center_horizontal"
+                android:background="@drawable/background_card_label"
+                android:enabled="false"
+                android:fontFamily="@font/comfortaa"
+                android:gravity="center_vertical"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:textColor="@color/text_label"
+                android:textSize="@dimen/text_size_card_label"
+                android:textStyle="bold"
+                android:translationY="-37dp"
+                tools:backgroundTint="@color/card_label_learned"
+                tools:text="Learned" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/background_check_button"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center"
+            android:minWidth="200dp"
+            android:outlineAmbientShadowColor="@color/floating_button_in_exercise"
+            android:outlineSpotShadowColor="@color/floating_button_in_exercise"
+            android:stateListAnimator="@animator/floating_button_in_exercise"
+            android:text="@string/text_check_button"
+            android:textAllCaps="false"
+            android:textColor="@color/text_remember_button_unselected"
+            android:textSize="@dimen/text_size_exercise_floating_button"
+            android:textStyle="bold" />
+
+</FrameLayout>

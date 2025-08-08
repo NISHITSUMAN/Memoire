@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:background="@drawable/background_bottom_sheet_round_corner"
+        tools:layout_gravity="bottom">
+
+    <View
+            android:id="@+id/handle"
+            android:layout_width="76dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bottom_sheet_handler" />
+
+    <TextView
+            android:id="@+id/numberOfSelectedItemsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/text_high_emphasis"
+            android:textSize="@dimen/text_size_option_bottom_sheet_title"
+            android:textStyle="bold"
+            tools:text="59 cards" />
+
+    <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/invertOptionItem"
+                    style="@style/DeckOptionItem"
+                    android:text="@string/card_selection_option_invert"
+                    app:drawableStartCompat="@drawable/ic_round_import_export_20" />
+
+            <TextView
+                    android:id="@+id/changeGradeOptionItem"
+                    style="@style/DeckOptionItem"
+                    android:text="@string/card_selection_option_change_grade"
+                    app:drawableStartCompat="@drawable/ic_medal_20" />
+
+            <TextView
+                    android:id="@+id/markAsLearnedOptionItem"
+                    style="@style/DeckOptionItem"
+                    android:text="@string/card_selection_option_mark_as_learned"
+                    app:drawableStartCompat="@drawable/ic_mark_as_learned_20" />
+
+            <TextView
+                    android:id="@+id/markAsUnlearnedOptionItem"
+                    style="@style/DeckOptionItem"
+                    android:text="@string/card_selection_option_mark_as_unlearned"
+                    app:drawableStartCompat="@drawable/ic_mark_as_unlearned_20" />
+
+            <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/divider" />
+
+            <TextView
+                    android:id="@+id/removeOptionItem"
+                    style="@style/DeckOptionItem"
+                    android:text="@string/card_selection_option_remove"
+                    app:drawableStartCompat="@drawable/ic_round_delete_20" />
+
+            <TextView
+                    android:id="@+id/moveOptionItem"
+                    style="@style/DeckOptionItem"
+                    android:text="@string/card_selection_option_move_to"
+                    app:drawableStartCompat="@drawable/ic_round_drive_file_move_20" />
+
+            <TextView
+                    android:id="@+id/copyOptionItem"
+                    style="@style/DeckOptionItem"
+                    android:text="@string/card_selection_option_copy_to"
+                    app:drawableStartCompat="@drawable/ic_round_file_copy_20" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

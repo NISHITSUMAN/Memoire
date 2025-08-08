@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/paragraph1"
+            style="@style/ArticleParagraph"
+            tools:text="@string/article_exercise_paragraph_1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <TextView
+            android:id="@+id/paragraph2"
+            style="@style/ArticleParagraph"
+            tools:text="@string/article_exercise_paragraph_2" />
+
+    <include
+            android:id="@+id/learnedCardExample"
+            layout="@layout/item_exercise_card_off_test"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+    <FrameLayout
+            android:id="@+id/controlPanelOfLearnedCardExample"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/control_panel"
+            android:elevation="2dp">
+
+        <ImageButton
+                android:id="@+id/markAsLearnedButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/ripple_on_control_panel"
+                android:contentDescription="@string/description_mark_as_learned_button"
+                android:tint="@color/icon_on_control_panel"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_mark_as_learned" />
+
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/paragraph3"
+            style="@style/ArticleParagraph"
+            android:text="@string/article_exercise_paragraph_3" />
+
+    <include
+            android:id="@+id/maskedLettersHintExample"
+            layout="@layout/item_exercise_card_off_test"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+    <include
+            android:id="@+id/quizHintExample"
+            layout="@layout/item_exercise_card_quiz_test"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:visibility="gone" />
+
+    <FrameLayout
+            android:id="@+id/controlPanelOfHintExample"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/control_panel"
+            android:elevation="2dp">
+
+        <ImageButton
+                android:id="@+id/hintButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/ripple_on_control_panel"
+                android:contentDescription="@string/description_hint_button"
+                android:tint="@color/icon_on_control_panel"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_lightbulb_outline_24"
+                tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/paragraph4"
+            style="@style/ArticleParagraph"
+            tools:text="@string/article_exercise_paragraph_4" />
+
+</LinearLayout>

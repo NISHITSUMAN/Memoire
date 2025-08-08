@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_card_overview"
+            tools:visibility="gone" />
+
+    <TextView
+            android:id="@+id/emptyTextView"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/the_deck_does_not_yet_contain_cards"
+            android:textColor="@color/empty_list"
+            android:textSize="@dimen/text_size_no_search_result"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:drawableTint="@color/empty_list"
+            app:drawableTopCompat="@drawable/ic_round_view_carousel_64"
+            tools:visibility="visible" />
+
+</FrameLayout>

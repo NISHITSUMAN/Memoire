@@ -1,0 +1,123 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cardView"
+        style="@style/ExerciseCard">
+
+    <LinearLayout
+            android:id="@+id/cardLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+        <FrameLayout
+                android:id="@+id/questionFrame"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent">
+
+            <ScrollView
+                    android:id="@+id/questionScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:visibility="invisible"
+                    tools:visibility="visible">
+
+                <com.odnovolov.forgetmenot.presentation.common.customview.TextViewWithObservableSelection
+                        android:id="@+id/questionTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/text_size_question"
+                        tools:text="Эти люди привычны к тяжелой работе." />
+
+            </ScrollView>
+
+            <TextView
+                    android:id="@+id/showQuestionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/curtain"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/text_show_question_button"
+                    android:textColor="@color/text_curtain_selector"
+                    android:textSize="@dimen/text_size_exercise_show_button"
+                    android:visibility="gone" />
+
+        </FrameLayout>
+
+        <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_on_card" />
+
+        <FrameLayout
+                android:id="@+id/answerFrame"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent">
+
+            <ScrollView
+                    android:id="@+id/answerScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:visibility="gone">
+
+                <com.odnovolov.forgetmenot.presentation.common.customview.TextViewWithObservableSelection
+                        android:id="@+id/answerTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:padding="16dp"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/text_size_answer"
+                        tools:text="These men are used to hard work." />
+
+            </ScrollView>
+
+            <TextView
+                    android:id="@+id/showAnswerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/curtain"
+                    android:gravity="center"
+                    android:minHeight="48dp"
+                    android:text="@string/text_show_answer_button"
+                    android:textColor="@color/text_curtain_selector"
+                    android:textSize="@dimen/text_size_exercise_show_button"
+                    tools:background="@color/curtain" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/cardLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/background_card_label"
+            android:backgroundTint="@color/card_label_learned"
+            android:enabled="false"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center_vertical"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="@string/card_label_learned"
+            android:textColor="@color/text_label"
+            android:textSize="@dimen/text_size_card_label"
+            android:textStyle="bold"
+            android:translationY="-37dp"
+            tools:translationY="0dp" />
+
+</androidx.cardview.widget.CardView>

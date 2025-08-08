@@ -1,0 +1,3 @@
+- added starting decks
+- provided access to the deck catalog
+- fixed launching issues

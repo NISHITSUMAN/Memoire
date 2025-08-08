@@ -1,0 +1,1319 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Common -->
+
+    <string name="description_help_button">Допомогти</string>
+    <string name="description_back_button">Перейти назад</string>
+    <string name="description_back_button2">Повернутися</string>
+    <string name="description_close">закрити</string>
+    <string name="description_attention_icon">іконка \"Увага\"</string>
+    <string name="title_example_in_settings_bottom_sheet">Приклад</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="disabled">Вимкнено</string>
+    <string name="label_name">Назва</string>
+    <string name="quit_without_saving_message">Ваші незбережені зміни буде втрачено. Зберегти зміни
+        перед виходом?</string>
+    <string name="button_save">Зберегти</string>
+    <string name="button_quit_without_saving">Вийти без збереження</string>
+    <string name="no_cards">Немає карток</string>
+    <string name="button_go_back">Повернутися назад</string>
+
+
+    <!-- Main drawer -->
+
+    <string name="drawer_item_decks">Колоди</string>
+    <string name="drawer_item_settings">Налаштування</string>
+    <string name="drawer_item_backup">Резервне копіювання</string>
+    <string name="drawer_item_support_app">Підтримати додаток</string>
+    <string name="drawer_item_help">Допомога</string>
+    <string name="drawer_item_about">Про додаток</string>
+
+
+    <!-- Deck list screen -->
+
+    <string name="description_drawer_button">Відкрити меню навігації</string>
+    <string name="hint_search_edittext">Пошук</string>
+    <string name="title_deck_selection_toolbar_choose_decks_to_play">Оберіть колоди для програвання
+    </string>
+    <string name="title_deck_selection_toolbar_choose_decks_for_exercise">Оберіть колоди для вправи
+    </string>
+    <plurals name="title_selection_toolbar_number_of_selected_decks">
+        <item quantity="one">%d колода</item>
+        <item quantity="few">%d колоди</item>
+        <item quantity="many">%d колод</item>
+    </plurals>
+    <string name="tab_decks">Колоди</string>
+    <string name="tab_cards">Картки</string>
+    <string name="no_matching_decks">Немає відповідних колод</string>
+    <string name="no_matching_cards">Немає відповідних карток</string>
+    <string name="no_decks">Немає колод</string>
+    <string name="deck_list_title_all_decks">Всі колоди</string>
+    <string name="deck_list_title_decks_available_for_exercise">Колоди, доступні для вправи</string>
+    <string name="deck_list_title_specific_deck_list_available_for_exercise">\'%1$s\', доступні для вправи</string>
+    <string name="text_add_cards_button">Додати картки</string>
+    <string name="title_add_cards_popup">Додати картки</string>
+    <string name="text_import_file_button">Імпортувати файл</string>
+    <string name="text_browse_catalog_button">Переглянути каталог</string>
+    <string name="text_create_new_deck_button">Створити нову колоду</string>
+    <string name="toast_no_file_manager_to_load">У вас немає жодного файлового менеджера щоб
+        завантажити файл</string>
+    <string name="toast_no_file_manager_to_create">У вас немає жодного файлового менеджера щоб
+        створити файл</string>
+    <string name="error_loading_file">Не вдалося прочитати файли:\n\n%1$s</string>
+    <string name="snackbar_deck_has_been_created">Створена колода \'%s\'</string>
+    <string name="text_filter_button">Фільтри</string>
+    <string name="title_deck_filters_popup">Фільтри</string>
+    <string name="deck_filter_only_decks_available_for_exercise">Тільки колоди, доступні для вправи
+    </string>
+    <string name="section_title_in_filters_popup_deck_lists">Списки колод</string>
+    <string name="create_new_deck_list">Створити новий список</string>
+    <string name="sort_by_name">За назвою</string>
+    <string name="sort_by_time_created">За часом створення</string>
+    <string name="sort_by_time_last_tested">За часом остан. тест.</string>
+    <string name="sort_by_frequency_of_use">За частотою використ.</string>
+    <string name="sort_by_task">За завданням</string>
+    <string name="title_deck_sorting_popup">Сортувати за</string>
+    <string name="description_change_sorting_direction">Змінити напрямок сортування</string>
+    <string name="deck_sorting_name">Назвою</string>
+    <string name="deck_sorting_time_created">Часом створення</string>
+    <string name="deck_sorting_by_time_last_tested">Часом остан. тест.</string>
+    <string name="deck_sorting_by_frequency_of_use">Частотою використ.</string>
+    <string name="deck_sorting_by_task">Завданням</string>
+    <string name="check_box_new_decks_first">Спочатку нові колоди</string>
+    <string name="description_pin_icon">іконка \"Шпилька\"</string>
+    <string name="deck_summary_table_average_laps">Кіл</string>
+    <string name="deck_summary_table_learned">Вивчено</string>
+    <string name="deck_summary_table_task">Завдання</string>
+    <string name="deck_summary_table_last_tested">Ост. тест.</string>
+    <string name="deck_options">Опції колоди</string>
+    <string name="deck_option_start_exercise">Розпочати вправу</string>
+    <string name="deck_option_autoplay">Автоматично програти</string>
+    <string name="deck_option_rename">Перейменувати</string>
+    <string name="deck_option_edit_cards">Редагувати картки</string>
+    <string name="deck_option_setup">Налаштувати</string>
+    <string name="deck_option_pin">Закріпити</string>
+    <string name="deck_option_unpin">Відкріпити</string>
+    <string name="deck_option_add_to_deck_list">Додати до списку колод</string>
+    <string name="deck_option_remove_from_deck_list">Вилучити зі списку колод</string>
+    <string name="deck_option_remove_from_deck_list_with_arg">Вилучити зі списку колод \'%1$s\'</string>
+    <string name="deck_option_set_preset">Встановити пресет</string>
+    <string name="deck_option_export">Експортувати</string>
+    <string name="deck_option_merge_into">Об\'єднати в</string>
+    <string name="deck_option_remove">Видалити</string>
+    <plurals name="snackbar_decks_removing">
+        <item quantity="one">%d колода видалена(і)</item>
+        <item quantity="few">Видалено %d колоди</item>
+        <item quantity="many">Видалено %d колод</item>
+    </plurals>
+    <plurals name="snackbar_decks_merging">
+        <item quantity="one">%1$d колода була об\'єднана в \'%2$s\'</item>
+        <item quantity="few">%1$d колоди було об\'єднано в \'%2$s\'</item>
+        <item quantity="many">%1$d колод було об\'єднано в \'%2$s\'</item>
+    </plurals>
+    <string name="dialog_title_choose_deck_list">Оберіть список колод</string>
+    <string name="dialog_title_choose_preset">Оберіть пресет</string>
+    <plurals name="snackbar_default_preset_has_been_applied">
+        <item quantity="one">Стандартний пресет застосований до %d колоди</item>
+        <item quantity="few">Стандартний пресет застосований до %d колод</item>
+        <item quantity="many">Стандартний пресет застосований до %d колод</item>
+    </plurals>
+    <plurals name="snackbar_preset_has_been_applied">
+        <item quantity="one">Пресет \'%1$s\' застосований до %2$d колоди</item>
+        <item quantity="few">Пресет \'%1$s\' застосований до %2$d колод</item>
+        <item quantity="many">Пресет \'%1$s\' застосований до %2$d колод</item>
+    </plurals>
+    <string name="text_autoplay_button">Автопрогравання</string>
+    <string name="text_exercise_button">Вправа</string>
+    <string name="text_exercise_button_with_cards_count">Вправа (%d)</string>
+    <string name="progress_bar_reading_files">Читання файлів ..</string>
+
+
+    <!-- 'No card is ready for exercise' dialog -->
+
+    <string name="dialog_title_no_cards_ready_for_exercise">Немає карток готових для вправи</string>
+    <string name="description_no_exercise_card_dialog_paragraph_1_part_1">Відповідно до інтервалів,
+        застосованих до цих колод</string>
+    <string name="description_no_exercise_card_dialog_paragraph_1_part_1_with_args">Відповідно до
+        інтервалів, застосованих до цієї колоди (%1$s)</string>
+    <string name="description_no_exercise_card_dialog_paragraph_1_part_2">, ще немає карток,
+        доступних для вправи. Перша картка буде доступна через:</string>
+    <plurals name="days">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d днів</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d годину</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d хвилину</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d секунду</item>
+        <item quantity="few">%d секунди</item>
+        <item quantity="many">%d секунд</item>
+    </plurals>
+    <string name="description_no_exercise_card_dialog_paragraph_2">Ви можете змінити або вимкнути
+        інтервали в налаштуваннях колоди.</string>
+    <string name="button_go_to_deck_settings">Перейти до налаштувань колоди</string>
+
+
+    <!-- Deck lists editor -->
+
+    <string name="screen_title_deck_lists">Списки колод</string>
+    <string name="hint_deck_list_edittext">Назва списка</string>
+    <string name="description_deck_list_icon">іконка cписку колод</string>
+    <string name="title_select_deck_list_color_popup">Колір списку колоди</string>
+    <string name="custom_color">Свій колір</string>
+    <string name="description_random_color">Випадковий колір</string>
+    <string name="toast_deck_list_is_removed">Список колод видалено</string>
+
+
+    <!-- Cards export dialog -->
+
+    <string name="dialog_title_export">Експорт</string>
+    <string name="title_choose_format">Оберіть формат</string>
+    <string name="title_waiting_for_destination">Очікування розташування ..</string>
+    <string name="button_select_destination">Обрати розташування</string>
+    <string name="toast_couldnt_get_destination">Не вдалося отримати розташування!</string>
+    <string name="toast_couldnt_get_file">Не вдалося отримати файл!</string>
+    <string name="progress_bar_exporting">Експортування ..</string>
+    <plurals name="export_result_successful">
+        <item quantity="one">%d колода успішно експортована(і)</item>
+        <item quantity="few">%d колоди успішно експортовані</item>
+        <item quantity="many">%d колод успішно експортовані</item>
+    </plurals>
+    <string name="export_result_error">Помилка під час експорту колод:\n\'%1$s\'</string>
+
+
+    <!-- Cards import screen -->
+
+    <string name="screen_title_file_import">Імпорт файлу</string>
+    <string name="text_skip_button">Пропустити</string>
+    <string name="add_to">Додати до:</string>
+    <string name="deck_label_in_file_import_new">Нова колода</string>
+    <string name="deck_label_in_file_import_existing">Існуюча колода</string>
+    <string name="popup_change_deck_for_import_new_button">Нової колоди</string>
+    <string name="popup_change_deck_for_import_existing_button">Існуючої колоди</string>
+    <string name="tab_name_source_text">Вихідний текст</string>
+    <plurals name="source_text_error_button">
+        <item quantity="one">%d помилка</item>
+        <item quantity="few">%d помилки</item>
+        <item quantity="many">%d помилок</item>
+    </plurals>
+    <string name="description_undo_button">Скасувати</string>
+    <string name="description_redo_button">Повторити</string>
+    <string name="label_file_format">Формат</string>
+    <string name="description_file_format_icon">іконка \"Формат файлу\"</string>
+    <string name="popup_title_file_format">Формат</string>
+    <string name="item_file_format_fmn_format">\'Q:A:\' формат</string>
+    <string name="text_dsv_format_radiobutton">Значення, розділені розділювачем</string>
+    <string name="description_view_format_settings">Подивитися налаштування формату</string>
+    <string name="description_edit_format_settings">Змінити налаштування формату</string>
+    <string name="description_add_new_format_settings">Додати нові налаштування формату</string>
+    <string name="label_encoding">Кодування</string>
+    <string name="description_charset_icon">іконка \"Кодування\"</string>
+    <string name="popup_title_charset">Кодування</string>
+    <plurals name="dialog_title_ask_to_use_existing_deck_for_import_next_files" tools:ignore="MissingQuantity">
+        <item quantity="one" tools:ignore="ImpliedQuantity">Ви бажаєте використати цю колоду (%1$s)
+            для імпорту наступного файлу(ів)?</item>
+        <item quantity="other">Ви бажаєте використати цю колоду (%1$s) для імпорту наступних %2$d
+            файлів?</item>
+    </plurals>
+    <string name="text_file_edit_off">Занадто великий файл для редагування</string>
+    <string name="cannot_extract_any_cards">Не вдається дістати жодної картки</string>
+    <plurals name="toast_number_of_imported_cards">
+        <item quantity="one">%d картка була імпортована</item>
+        <item quantity="few">%d картки було імпортовано</item>
+        <item quantity="many">%d карток було імпортовано</item>
+    </plurals>
+    <string name="toast_no_cards_to_import">Немає карток для імпорту</string>
+    <string name="toast_invalid_deck_name">Неприпустима назва колоди</string>
+    <plurals name="import_error_message_1_part">
+        <item quantity="one">%d файл містить</item>
+        <item quantity="few">%d файли містять</item>
+        <item quantity="many">%d файлів містять</item>
+    </plurals>
+    <plurals name="import_error_message_2_part">
+        <item quantity="one">%d помилку.</item>
+        <item quantity="few">%d помилки.</item>
+        <item quantity="many">%d помилок.</item>
+    </plurals>
+    <string name="button_fix_errors">Виправити помилки</string>
+    <string name="button_import_ignoring_errors">Імпортувати ігноруючи помилки</string>
+    <string name="text_quit_file_import_bottom_sheet">Ви дійсно бажаєте скасувати імпортування?</string>
+
+
+    <!-- Deck chooser screen -->
+
+    <string name="screen_title_choose_a_deck_to_import_cards_to">Виберіть колоду, куди потрібно
+        імпортувати картки</string>
+    <string name="screen_title_choose_a_deck_to_merge_into">Виберіть колоду, в яку потрібно
+        перемістити картки</string>
+    <string name="screen_title_choose_a_deck_to_move_card">Виберіть колоду, в яку потрібно
+        перемістити картку</string>
+    <string name="screen_title_choose_a_deck_to_copy_card">Виберіть колоду, в яку потрібно
+        скопіювати картку</string>
+    <string name="screen_title_choose_a_deck_to_move_cards">Виберіть колоду, в яку потрібно
+        перемістити картки</string>
+    <string name="screen_title_choose_a_deck_to_copy_cards">Виберіть колоду, в яку потрібно
+        скопіювати картки</string>
+    <string name="description_add_deck_button">Додати колоду</string>
+
+
+    <!-- Exercise screen -->
+
+    <string name="card_label_learned">Вивчена</string>
+    <string name="card_label_expired">Прострочена</string>
+    <string name="explanation_card_label_learned">\"Вивчена\" означає, що картка більше не буде
+        запитуватися у вправі</string>
+    <string name="explanation_card_label_expired">\"Прострочена\" означає, що ви не встигли
+        відповісти на запитання протягом відведеного часу</string>
+    <string name="text_show_question_button">Показати питання</string>
+    <string name="text_show_answer_button">Показати відповідь</string>
+    <string name="text_remember_button">Пам’ятаю</string>
+    <string name="text_not_remember_button">Не пам’ятаю</string>
+    <string name="text_check_button">Перевірити</string>
+    <string name="description_grade_button">Оцінка</string>
+    <string name="popup_title_intervals">Інтервали</string>
+    <string name="description_intervals_icon">іконка \"Інтервали\"</string>
+    <string name="description_intervals_are_off">Інтервали вимкнені для цієї картки</string>
+    <string name="description_mark_as_learned_button">Позначити як \"Вивчена\"</string>
+    <string name="description_mark_as_unlearned_button">Позначити як \"Не вивчена\"</string>
+    <string name="description_speak_button">Вимовити</string>
+    <string name="description_stop_speaking_button">Припинити вимовлення</string>
+    <string name="description_cannot_speak_button">Відкрити пояснення помилки відтворення</string>
+    <string name="title_speak_error_popup">Вимова недоступна</string>
+    <string name="description_issue_icon">іконка \"Проблема\"</string>
+    <string name="speak_error_description_failed_to_initialized">Не вдалося ініціалізувати систему TTS</string>
+    <string name="speak_error_description_failed_to_initialized_with_specifying_tts_engine">Не
+        вдалося ініціалізувати систему TTS (%1$s)</string>
+    <string name="speak_error_description_language_is_not_supported">Поточна система TTS не
+        підтримує %1$s</string>
+    <string name="speak_error_description_language_is_not_supported_with_specifying_tts_engine">
+        Поточна система TTS (%1$s) не підтримує %2$s</string>
+    <string name="speak_error_description_missing_data_for_language">Відсутні дані для %1$s</string>
+    <string name="error_message_failed_to_speak">Не вдалося вимовити</string>
+    <string name="error_message_cannot_get_audio_focus">Не вдається отримати аудіофокус</string>
+    <string name="description_hint_button">Підказати</string>
+    <string name="popup_title_hints">Підказки</string>
+    <string name="description_hint_icon">іконка \"Підказка\"</string>
+    <string name="text_hint_get_variants">Отримати варіанти</string>
+    <string name="text_hint_mask_letters_button">Замаскувати літери</string>
+    <string name="text_unmask_the_first_letter_button">Розкрити першу літеру</string>
+    <string name="text_unmask_selected_region_button">Розкрити виділений фрагмент</string>
+    <string name="hints_are_not_accessible_because_the_card_is_answered">Підказки недоступні,
+        оскільки вже отримано відповідь</string>
+    <string name="hints_are_not_accessible_because_the_card_is_learned">Підказки недоступні,
+        оскільки картка вивчена</string>
+    <string name="description_timer_button">Таймер</string>
+    <string name="popup_title_timer">Таймер</string>
+    <string name="description_timer_icon">іконка \"Таймер\"</string>
+    <string name="text_stop_timer_button">Зупинити</string>
+    <string name="timer_is_off_because_walking_mode">Таймер вимкнено, бо ввімкнено \"Режим
+        прогулянки\". Оскільки в цьому режимі ми сприймаємо картки на слух, а не візуально, таймер
+        може привести до непорозуміння.</string>
+    <string name="timer_stopped">Таймер зупинено</string>
+    <string name="time_is_over">Час вийшов!</string>
+    <string name="description_edit_card">Редагувати картку</string>
+    <string name="description_edit_deck_settings">Редагувати налаштування колоди</string>
+    <string name="description_search_button">Шукати</string>
+    <string name="description_walking_mode_button">Режим прогулянки</string>
+    <string name="popup_title_walking_mode">Режим прогулянки</string>
+    <string name="description_walking_mode_icon">іконка \"Режим прогулянки\"</string>
+    <string name="description_walking_mode_settings_button">Налаштування \"Режима прогулянки\"</string>
+    <plurals name="message_quit_exercise">
+        <item quantity="one">На %d картку все ще не отримано відповідь</item>
+        <item quantity="few">На %d картки все ще не отримано відповідь</item>
+        <item quantity="many">На %d карток все ще не отримано відповідь</item>
+    </plurals>
+    <string name="button_show_unanswered_card">Показати картку без відповіді</string>
+    <string name="button_quit_exercise">Вийти все одно</string>
+    <string name="no_cards_to_exercise">Немає карток для вправи</string>
+    <string name="deck_has_no_cards_to_show_example">У колоді немає карток, щоб показати приклад</string>
+
+
+    <!-- Card filter for autoplay screen -->
+
+    <string name="screen_title_card_filter">Фільтр карток</string>
+    <plurals name="matching_cards_number_label">
+        <item quantity="one" tools:ignore="ImpliedQuantity">картка відповідає фільтру</item>
+        <item quantity="few">картки відповідають фільтру</item>
+        <item quantity="many">карток відповідають фільтру</item>
+    </plurals>
+    <string name="title_card_filter_state">Стан</string>
+    <string name="text_available_for_exercise_group_checkbox">Доступні для вправи</string>
+    <string name="text_awaiting_group_checkbox">В очікуванні</string>
+    <string name="text_learned_group_checkbox">Вивчені</string>
+    <string name="title_card_filter_grade">Оцінка</string>
+    <string name="title_card_filter_last_tested">Час останнього тестування</string>
+    <string name="title_last_tested_from">З</string>
+    <string name="title_last_tested_to">до</string>
+    <string name="zero_time">Самого початку</string>
+    <string name="now">Нині</string>
+    <string name="time_ago">%1$s тому</string>
+    <string name="title_dialog_last_tested_from">Останній раз тестувалася з</string>
+    <string name="title_dialog_last_tested_to">Останній раз тестувалася до</string>
+    <string name="ago">тому</string>
+    <string name="text_start_playing_button">Почати програвати</string>
+    <string name="toast_text_no_card_matches_filter_conditions">Жодна картка не відповідає умовам
+        фільтра</string>
+
+
+    <!-- Player screen -->
+
+    <string name="player_notification_channel_name">Програвач карток</string>
+    <string name="player_notification_channel_description">Послідовна вимова питань та відповідей</string>
+    <string name="player_notification_title">Програвач карток</string>
+    <string name="pause_in_notification">Зупинитися</string>
+    <string name="resume_in_notification">Продовжити</string>
+    <string name="play_one_more_lap_in_notification">Програти ще одне коло</string>
+    <string name="description_laps_button">Кола</string>
+    <string name="title_dialog_laps_in_player">Кількість кіл</string>
+    <string name="radiobutton_infinitely">Безкінечно</string>
+    <plurals name="radiobutton_specific_number_of_laps">
+        <item quantity="one" tools:ignore="ImpliedQuantity">коло</item>
+        <item quantity="few">кола</item>
+        <item quantity="many">кіл</item>
+    </plurals>
+    <string name="description_pause_button">Зупинитися</string>
+    <string name="description_resume_button">Продовжити</string>
+    <string name="description_completed_cards">Завершені картки</string>
+    <string name="description_playing_completed">Програвання завершено</string>
+    <string name="button_end">Закінчити</string>
+    <string name="button_play_again">Програти знову</string>
+    <string name="no_cards_to_play">Немає карток для програвання</string>
+
+
+    <!-- Deck editor screen -->
+
+    <string name="screen_title_deck_editor">Редактор колоди</string>
+    <string name="screen_title_deck_settings">Налаштування колоди</string>
+    <string name="title_rename_deck_dialog">Назва колоди</string>
+    <string name="error_message_empty_name">Назва не може бути порожньою</string>
+    <string name="error_message_occupied_name">Ця назва - зайнята</string>
+    <string name="tab_name_settings">Налаштування</string>
+    <string name="tab_name_cards">Картки</string>
+    <string name="description_add_card_button">Додати картку</string>
+
+
+    <!-- Selection toolbar -->
+
+    <string name="description_cancel_selection">Скасувати обрання</string>
+    <string name="description_select_all">Вибрати все</string>
+    <string name="description_unselect_all">Скасувати вибір усіх</string>
+    <string name="description_select_only_new">Вибрати лише нові</string>
+    <string name="description_remove">Видалити</string>
+    <string name="description_more_options">Більше опцій</string>
+
+
+    <!-- Card selection toolbar -->
+
+    <plurals name="title_card_selection_toolbar">
+        <item quantity="one">%d картка</item>
+        <item quantity="few">%d картки</item>
+        <item quantity="many">%d карток</item>
+    </plurals>
+    <string name="card_selection_option_invert">Інвертувати</string>
+    <string name="card_selection_option_change_grade">Змінити оцінку</string>
+    <string name="card_selection_option_mark_as_learned">Позначити як \"Вивчені\"</string>
+    <string name="card_selection_option_mark_as_unlearned">Позначити як  \"Невивчені\"</string>
+    <string name="card_selection_option_remove">Видалити</string>
+    <string name="card_selection_option_move_to">Перемістити в</string>
+    <string name="card_selection_option_copy_to">Копіювати в</string>
+    <string name="dialog_title_change_grade">Оберіть оцінку</string>
+    <plurals name="snackbar_card_selection_action_completed_invert">
+        <item quantity="one">%d картка були інвертовані</item>
+        <item quantity="few">%d картки були інвертовані</item>
+        <item quantity="many">%d карток були інвертовані</item>
+    </plurals>
+    <plurals name="snackbar_card_selection_action_completed_change_grade">
+        <item quantity="one">Оцінки були змінені на %1$d в %2$d картках</item>
+        <item quantity="few">Оцінки були змінені на %1$d в %2$d картках</item>
+        <item quantity="many">Оцінки були змінені на %1$d в %2$d картках</item>
+    </plurals>
+    <plurals name="snackbar_card_selection_action_completed_mark_as_learned">
+        <item quantity="one">%d картка були позначені як \"Вивчені\"</item>
+        <item quantity="few">%d картки були позначені як \"Вивчені\"</item>
+        <item quantity="many">%d карток були позначені як \"Вивчені\"</item>
+    </plurals>
+    <plurals name="snackbar_card_selection_action_completed_mark_as_unlearned">
+        <item quantity="one">%d картка були позначені як \"Невивчені\"</item>
+        <item quantity="few">%d картки були позначені як \"Невивчені\"</item>
+        <item quantity="many">%d карток були позначені як \"Невивчені\"</item>
+    </plurals>
+    <plurals name="snackbar_card_selection_action_completed_remove">
+        <item quantity="one">Видалено %d картка</item>
+        <item quantity="few">Видалено %d картки</item>
+        <item quantity="many">Видалено %d карток</item>
+    </plurals>
+    <plurals name="snackbar_card_selection_action_completed_move">
+        <item quantity="one">%1$d картка були переміщені в \'%2$s\'</item>
+        <item quantity="few">%1$d картки були переміщені в \'%2$s\'</item>
+        <item quantity="many">%1$d карток були переміщені в \'%2$s\'</item>
+    </plurals>
+    <plurals name="snackbar_card_selection_action_completed_copy">
+        <item quantity="one">%1$d картка були скопійовані в \'%2$s\'</item>
+        <item quantity="few">%1$d картки були скопійовані в \'%2$s\'</item>
+        <item quantity="many">%1$d карток були скопійовані в \'%2$s\'</item>
+    </plurals>
+
+
+    <!-- Deck content screen -->
+
+    <string name="button_export">Експорт</string>
+    <string name="button_search">Пошук</string>
+    <string name="the_deck_does_not_yet_contain_cards">У колоді поки немає карт</string>
+
+
+    <!-- Search screen -->
+
+    <string name="hint_search_in_all_cards">Пошук у всіх картках</string>
+    <string name="hint_search_in_specific_deck">Пошук у \'%1$s\'</string>
+    <string name="message_no_paste_data">Буфер обміну не містить тексту</string>
+
+
+    <!-- Cards Editor screen -->
+
+    <string name="card_label_duplicated">Дубльована</string>
+    <string name="card_label_current_in_exercise">Поточна у вправі</string>
+    <string name="card_label_current_in_player">Поточна в плеєрі</string>
+    <string name="card_label_found">Знайдена</string>
+    <string name="card_label_new">Нова</string>
+    <string name="hint_question_edittext">Введіть запитання</string>
+    <string name="hint_answer_edittext">Введіть відповідь</string>
+    <string name="description_invert_card_button">Інвертувати картку</string>
+    <string name="description_paste_button">Вставити</string>
+    <string name="description_clear_button">Очистити</string>
+    <string name="description_remove_card_button">Видалити картку</string>
+    <string name="description_move_card_button">Перемістити картку в іншу колоду</string>
+    <string name="description_copy_card_button">Копіювати картку в іншу колоду</string>
+    <string name="description_card_info_button">Інформація про картку</string>
+    <string name="card_is_removed">Картка видалена</string>
+    <string name="card_is_moved">Картка переміщена</string>
+    <string name="card_is_copied">Картка скопійована</string>
+    <string name="snackbar_action_cancel" tools:ignore="ButtonCase">скасувати</string>
+    <string name="popup_title_card_info">Інформація про картку</string>
+    <string name="description_info_icon">іконка \"Інфо\"</string>
+    <string name="card_info_popup_deck_title">Колода</string>
+    <string name="card_info_popup_number_of_tests_title">Кількість тестів</string>
+    <string name="card_info_popup_time_of_the_last_test_title">Час останнього тесту</string>
+    <string name="description_done_button">Готово</string>
+    <string name="description_cancel_button">Скасувати</string>
+    <string name="toast_fill_in_the_card">Заповніть картку</string>
+    <plurals name="snackbar_cards_have_been_created">
+        <item quantity="one">%d картка була створена</item>
+        <item quantity="few">%d картки були створені</item>
+        <item quantity="many">%d карток були створені</item>
+    </plurals>
+
+
+    <!-- Deck settings screen -->
+
+    <string name="deck_settings_section_general">Загальні</string>
+    <string name="deck_settings_section_exercise">Вправа</string>
+    <string name="deck_settings_section_autoplay">Автопрогравання</string>
+    <string name="deck_settings_item_random_order">Випадковий порядок</string>
+    <string name="deck_settings_item_pronunciation">Вимова</string>
+    <string name="deck_settings_item_card_inversion">Інверсія картки</string>
+    <string name="deck_settings_item_question_display">Відображення запитань</string>
+    <string name="deck_settings_item_testing_method">Метод тестування</string>
+    <string name="deck_settings_item_intervals">Інтервали</string>
+    <string name="deck_settings_item_grading">Оцінювання</string>
+    <string name="deck_settings_item_motivational_timer">Мотиваційний таймер</string>
+    <string name="deck_settings_item_pronunciation_plan">План мовлення</string>
+    <string name="description_navigate_icon">іконка \"Перейти\"</string>
+    <string name="speak_event_abbr_speak_question">Q</string>
+    <string name="speak_event_abbr_speak_answer">A</string>
+    <string name="speak_event_abbr_delay">%dс</string>
+    <string name="on">Увімкнено</string>
+    <string name="off">Вимкнено</string>
+    <string name="interval_unit_abbreviation_minutes">хв</string>
+    <string name="interval_unit_abbreviation_hours">г</string>
+    <string name="interval_unit_abbreviation_days">дн</string>
+    <string name="interval_unit_abbreviation_months">м</string>
+    <string name="grading_settings_description_part_1">При першій відповіді: [Правильно: %1$s, Неправильно: %2$s]</string>
+    <string name="grading_settings_description_part_2">,  При повторній відповіді: [Правильно: %1$s, Неправильно: %2$s]</string>
+    <string name="time_for_answer">%d сек.</string>
+
+
+    <!-- Presets -->
+
+    <string name="title_preset_name_input_dialog">Назва пресету</string>
+    <string name="preset_name_default">Стандартний</string>
+    <string name="preset_name_individual">Індивідуальний</string>
+    <string name="description_save_preset">Зберегти налаштування</string>
+    <string name="title_preset_popup">Пресети</string>
+    <string name="description_rename_preset_button">Перейменувати пресет</string>
+    <string name="description_delete_preset_button">Видалити пресет</string>
+    <string name="description_add_new_preset">Додати новий пресет</string>
+    <string name="title_remove_preset_dialog">Видалення пресета \'%1$s\'</string>
+    <string name="top_dialog_text_remove_preset">Цей пресет використовується цими колодами:</string>
+    <string name="bottom_dialog_text_remove_preset">Якщо ви видалите цей пресет, то для цих колод
+        буде встановлений стандартний набір налаштувань. Ви дійсно хочете видалити цей пресет?</string>
+    <string name="button_delete">Видалити</string>
+
+
+    <!-- Pronunciation screen -->
+
+    <string name="screen_title_pronunciation">Вимова</string>
+    <string name="tip_pronunciation_screen_select_languages">Оберіть мови запитання та відповіді,
+        щоб мати змогу правильно вимовляти.</string>
+    <string name="tip_pronunciation_screen_about_tts">Вимова працює завдяки Android TTS API. Якщо
+        ви хочете налаштувати синтез мови більш детально, наприклад, змінити систему, голос, висоту
+        звуку, темп мовлення, просто перейдіть до налаштувань TTS.</string>
+    <string name="tip_pronunciation_screen_about_autospeaking">Настійно рекомендується увімкнути
+        автоматичну промову іноземною мовою. Ви відразу будете знати, як повинні звучати слова, і
+        це також може допомогти швидше запам’ятати інформацію.</string>
+    <string name="tip_pronunciation_screen_about_selection">Щоб відтворити фрагмент тексту, просто
+        виділіть його та натисніть іконку "Вимовити".</string>
+    <string name="tip_pronunciation_screen_about_brackets">За умови, що функція \"Промовляти текст у
+        дужках\" вимкнена, текст, який слід вимовити, легко відокремити від тексту, який не повинен.
+        Використовуйте дужки () [] {} &lt;&gt; для цього. Наприклад, оберніть в них транскрипції,
+        синоніми або визначення.</string>
+    <string name="text_question_title_textview">Питання</string>
+    <string name="text_answer_title_textview">Відповідь</string>
+    <string name="default_language">Мова за замовчуванням</string>
+    <string name="text_autospeaking_switch">Автоматична вимова</string>
+    <string name="text_speak_text_in_brackets">Промовляти текст у дужках</string>
+    <string name="text_go_to_tts_settings_button">Перейти до налаштувань TTS</string>
+    <string name="toast_no_tts_settings">Ваш пристрій не має налаштувань TTS</string>
+
+
+    <!-- Card inversion screen -->
+
+    <string name="screen_title_card_inversion">Інверсія картки</string>
+    <string name="tip_card_inversion_screen">Переверніть картки, якщо відповіді можуть виглядати
+        як запитання, і навпаки. Наприклад, це можна застосувати до карток типу \"слово-переклад\".
+    </string>
+    <string name="item_card_inversion_off">Вимкнено</string>
+    <string name="item_card_inversion_on">Увімкнено</string>
+    <string name="item_card_inversion_every_other_lap">Через коло</string>
+    <string name="item_card_inversion_randomly">Випадковим чином</string>
+
+
+    <!-- Question display screen -->
+
+    <string name="screen_title_question_display">Відображення запитань</string>
+    <string name="tip_question_display_screen_why">Передбачається, що якщо ви приховуєте текст
+        запитання, ви будете сприймати питання на слух. Це може бути хорошим внеском у покращення
+        ваших навичок аудіювання під час вивчення мови.</string>
+    <string name="tip_question_display_screen_do_not_forget_autospeaking">Оскільки ви вимкнули
+        \"Відображення запитань\", ви будете сприймати запитання на слух. Тож, не забувайте вмикати
+        \"Автоматична вимову\" питання, щоб зробити вправу більш комфортним.</string>
+
+
+    <!-- Testing method screen -->
+
+    <string name="screen_title_testing_method">Метод тестування</string>
+    <string name="tip_testing_method_screen_without_testing">\"Без тестування\" підходить для
+        випадків, коли ви не плануєте повторювати картки більше, ніж один-два рази.</string>
+    <string name="tip_testing_method_screen_self_testing">У більшості випадків найкращим вибором є
+        \"Самотестування\". Саме ви вирішуєте, чи пам’ятаєте ви відповідь.</string>
+    <string name="tip_testing_method_screen_testing_with_variants">\"Тестування з варіантами\" є
+        більш розважальним методом тестування. Ви обираєте правильну відповідь з чотирьох
+        варіантів. Варіанти беруться з тієї ж колоди.</string>
+    <string name="tip_testing_method_screen_spell_check">За допомогою \"Перевірка правопису\"
+        перевіряється, чи відповідає ваша введена відповідь зі справжньою. Підходить, якщо правопис
+        для вас важливо.</string>
+    <string name="testing_method_without_testing">Без тестування</string>
+    <string name="testing_method_self_testing">Самотестування</string>
+    <string name="testing_method_testing_with_variants">Тестування з варіантами</string>
+    <string name="testing_method_spell_check">Перевірка правопису</string>
+
+
+    <!-- Intervals screen -->
+
+    <string name="screen_title_intervals">Інтервали</string>
+    <string name="tip_intervals_screen_importance">З інтервальними повторенями інформація або знання
+        відкладуться у вашу довгострокову пам’ять.</string>
+    <string name="tip_intervals_screen_adjust_interval_scheme">Налаштуйте схему інтервалів, яка
+        задовільнить вас. Загальний принцип: \"Чим вищий бал, тим тривалішим має бути інтервал\".
+    </string>
+    <plurals name="interval_unit_minutes">
+        <item quantity="one" tools:ignore="ImpliedQuantity">Хвилина</item>
+        <item quantity="few">Хвилини</item>
+        <item quantity="many">Хвилин</item>
+    </plurals>
+    <plurals name="interval_unit_hours">
+        <item quantity="one" tools:ignore="ImpliedQuantity">Година</item>
+        <item quantity="few">Години</item>
+        <item quantity="many">Годин</item>
+    </plurals>
+    <plurals name="interval_unit_days">
+        <item quantity="one" tools:ignore="ImpliedQuantity">День</item>
+        <item quantity="few">Дня</item>
+        <item quantity="many">Днів</item>
+    </plurals>
+    <plurals name="interval_unit_months">
+        <item quantity="one" tools:ignore="ImpliedQuantity">Місяць</item>
+        <item quantity="few">Місяця</item>
+        <item quantity="many">Місяців</item>
+    </plurals>
+
+
+    <!-- Grading screen -->
+
+    <string name="screen_title_grading">Оцінювання</string>
+    <string name="tip_grading_screen_indication">Вкажіть, як ви хочете оцінювати відповіді.</string>
+    <string name="tip_grading_screen_about_relationship_with_intervals">Оцінки визначають, який
+        інтервал повинен пройти після відповіді у вправі.</string>
+    <string name="tip_grading_screen_about_manual_change">Якщо ви вкажете оцінку вручну, ця схема
+        визначення оцінок не буде застосовуватися до картки протягом вправи.</string>
+    <string name="grade_change_value_do_not_change">Не змінювати</string>
+    <string name="grade_change_value_reset_to_zero">Скидати до 0</string>
+    <string name="diagram_block_on_first_answer">При першій відповіді</string>
+    <string name="diagram_block_wrong">Неправильно</string>
+    <string name="diagram_block_ask_again">Запитувати знову?</string>
+    <string name="diagram_block_on_repeated_answer">При повторній відповіді</string>
+    <string name="diagram_block_correct">Правильно</string>
+    <string name="description_diagram_arrow">Стрілка схеми</string>
+    <string name="dialog_title_change_grading_on_first_correct_answer">При першій правильній відповіді</string>
+    <string name="dialog_title_change_grading_on_first_wrong_answer">При першій неправильній відповіді</string>
+    <string name="dialog_title_change_grading_on_repeated_correct_answer">При правильній відповіді повторной картки</string>
+    <string name="dialog_title_change_grading_on_repeated_wrong_answer">При повторній неправильній відповіді</string>
+
+
+    <!-- Motivational timer screen -->
+
+    <string name="screen_title_motivational_timer">Мотиваційний таймер</string>
+    <string name="tip_motivational_timer_screen_description">\"Мотиваційний таймер\" розроблений, щоб
+        утримати вас від відволікаючих чинників. Якщо ви не відповісте протягом відведеного часу,
+        ви отримаєте покарання у вигляді позначення відповіді як неправильної.</string>
+    <string name="tip_motivational_timer_screen_how_to_do_with_this">Виділіть собі достатньо часу,
+        щоб відповідати на питання, не турбуючись про зворотний відлік. Якщо ви відчуваєте, що вам
+        потрібно більше часу, ви можете зупинити таймер.</string>
+    <string name="error_motivational_timer_input">число має бути\nбільше нуля</string>
+    <string name="saved">Збережено!</string>
+    <string name="message_quit_motivational_timer">Ви змінили налаштування таймера з \'%1$s\' на
+        \'%2$s\'. Хочете зберегти зміни?</string>
+
+
+    <!-- Pronunciation plan screen -->
+
+    <string name="screen_title_pronunciation_plan">План мовлення</string>
+    <string name="tip_pronunciation_plan_screen_description">Опишіть, як ви хочете, щоб карти
+        програвалися в \"Програвачі карт\".</string>
+    <string name="tip_pronunciation_plan_screen_about_longer_delay">Спробуйте подумки відповісти
+        на питання, перш ніж воно буде вимовлене. Якщо вам потрібно більше часу, просто збільште
+        затримку між вимовой питання та відповіді. Наприклад, переклад речення може зайняти 5 і
+        більше секунд.</string>
+    <string name="tip_pronunciation_plan_screen_about_repetition_pronunciation">Якщо ви тільки
+        почали вивчати іноземну мову, складіть план мовлення так, щоб текст на іноземній мові
+        промовлявся двічі.</string>
+    <string name="description_drag_handle_button">Ручка перетягування</string>
+    <string name="description_speak_icon">іконка "Вимовити"</string>
+    <string name="pronunciation_event_speak_question">Вимовити питання</string>
+    <string name="pronunciation_event_speak_answer">Вимовити відповідь</string>
+    <string name="pronunciation_event_delay">Затримка</string>
+    <string name="pronunciation_event_delay_with_args">Затримка %d сек.</string>
+    <string name="description_remove_pronunciation_event_button">Видалити подію</string>
+    <string name="description_add_pronunciation_event_button">Додати подію</string>
+    <string name="title_dialog_pronunciation_event">Оберіть подію</string>
+    <string name="sec">сек.</string>
+    <string name="error_message_cannot_change_last_speak_question">Неможливо змінити останню подію
+        \"Вимовити питання\"</string>
+    <string name="error_message_cannot_change_last_speak_answer">Неможливо змінити останню подію
+        \"Вимовити відповідь\"</string>
+
+
+    <!-- Settings screen -->
+
+    <string name="screen_title_settings">Налаштування</string>
+    <string name="text_fullscreen_settings_title">Повноекранний режим</string>
+    <string name="everywhere">Всюди</string>
+    <string name="nowhere">Ніде</string>
+    <string name="title_fullscreen_mode_dialog">Повноекранний режим</string>
+    <string name="item_text_fullscreen_in_exercise">Під час вправи</string>
+    <string name="item_text_fullscreen_in_card_player">В програвачі карток</string>
+    <string name="item_text_fullscreen_in_other_places">В інших місцях</string>
+    <string name="text_theme_settings_title">Тема</string>
+    <string name="theme_light">Світла</string>
+    <string name="theme_dark">Темна</string>
+    <string name="theme_default">Відповідно до режиму енергозбереження</string>
+    <string name="title_theme_dialog">Тема</string>
+    <string name="text_card_appearance_settings_title">Зовнішній вигляд картки</string>
+    <string name="text_card_appearance_settings_description">Як картка виглядає у вправі, плеєрі
+        і редакторі</string>
+    <string name="text_exercise_settings_title">Вправа</string>
+    <string name="text_exercise_settings_description">Деякі загальні налаштування вправи</string>
+    <string name="text_walking_mode_title">Режим прогулянки</string>
+    <string name="text_walking_mode_settings_description">Зміна дій клавіш гучності</string>
+
+
+    <!-- Card appearance -->
+
+    <string name="screen_title_card_appearance">Зовнішній вигляд картки</string>
+    <string name="title_question_field">Поле питання</string>
+    <string name="title_answer_field">Поле відповіді</string>
+    <string name="text_alignment">Вирівнювання тексту</string>
+    <string name="text_size">Розмір тексту</string>
+    <string name="error_message_indicate_text_size">Вкажіть розмір тексту</string>
+    <string name="dialog_title_question_text_size">Розмір тексту запитання</string>
+    <string name="dialog_title_answer_text_size">Розмір тексту відповіді</string>
+    <string name="title_common">Загальні</string>
+    <string name="text_opacity_in_light_theme">Прозорість тексту в світлій темі</string>
+    <string name="text_opacity_in_dark_theme">Прозорість тексту в темній темі</string>
+    <string name="dialog_title_text_opacity">Прозорість тексту</string>
+    <string name="text_opacity_example_text">Приклад\n\n%1$s</string>
+
+
+    <!-- Exercise settings -->
+
+    <string name="screen_title_exercise_settings">Налаштування вправи</string>
+    <string name="exercise_setting_card_prefilter">Фільтрація карток перед початком вправи</string>
+    <string name="card_prefilter_mode_do_not_filter">Не фільтрувати</string>
+    <plurals name="card_prefilter_mode_limit_cards_to">
+        <item quantity="one">Обмежити до %d картки</item>
+        <item quantity="few">Обмежити до %d карток</item>
+        <item quantity="many">Обмежити до %d карток</item>
+    </plurals>
+    <string name="card_prefilter_mode_show_filter_when_cards_more_than">Показувати фільтр карток,
+        коли їх кількість більше, ніж %d</string>
+    <string name="card_prefilter_mode_always_show_filter">Завжди показувати фільтр карток</string>
+    <string name="title_cards_threshold_dialog">Поріг карток</string>
+    <string name="description_cards_threshold_dialog_to_change_card_number_limitation">Вкажіть
+        максимальну кількість карток, які ви хочете обробляти у вправі одночасно.</string>
+    <string name="description_cards_threshold_dialog_to_change_card_number_threshold_for_showing_filter">Вкажіть
+        межу карток, при перевищенні якого буде відображатися фільтр карток.</string>
+    <string name="title_card_limit_dialog">Максимальна кількість карток</string>
+    <string name="exercise_setting_card_position_display">Відображення позиції карток</string>
+    <string name="card_position_display_progress_bar">Смуга просування</string>
+    <string name="card_position_display_text">Текст</string>
+    <string name="exercise_setting_vibrate_on_wrong_answer">Вібрувати при неправильній відповіді</string>
+    <string name="exercise_setting_go_to_next_card_after_marking_the_card_as_learned">Переходити
+        до наступної картки після позначення поточної як \'Вивчена\'</string>
+    <string name="exercise_setting_ask_to_quit_exercise">Запитувати про вихід з вправи, якщо не
+        на всі картки отримано відповідь</string>
+
+
+    <!-- Card filter for Exercise -->
+
+    <string name="title_card_filter_maximum_number_of_cards">Максимальна кількість карток</string>
+    <plurals name="cards">
+        <item quantity="one" tools:ignore="ImpliedQuantity">картка</item>
+        <item quantity="few">картки</item>
+        <item quantity="many">карток</item>
+    </plurals>
+    <string name="no_limit">Без обмежень</string>
+    <string name="text_start_exercise_button">Почати вправу</string>
+
+
+    <!-- Walking mode settings screen -->
+
+    <string name="screen_title_walking_mode_settings">Режим прогулянки</string>
+    <string name="text_volume_up_button_section">Клавіша збільшення гучності</string>
+    <string name="text_volume_down_button_section">Клавіша зменшення гучності</string>
+    <string name="text_single_press_title">Дія одного натискання</string>
+    <string name="text_double_press_title">Дія подвійного натискання</string>
+    <string name="text_long_press_title">Дія тривалого натискання</string>
+    <string name="key_gesture_action_no_action">Ніяких дій</string>
+    <string name="key_gesture_action_move_to_next_card">Перейти до наступної картки</string>
+    <string name="key_gesture_action_move_to_previous_card">Перейти до попередньої картки</string>
+    <string name="key_gesture_action_mark_as_remember">Позначити як \"Пам’ятаю\"</string>
+    <string name="key_gesture_action_mark_as_not_remember">Позначити як \"Не пам’ятаю\"</string>
+    <string name="key_gesture_action_mark_card_as_learned">Позначити як \"Вивчена\"</string>
+    <string name="key_gesture_action_speak_question">Вимовити питання</string>
+    <string name="key_gesture_action_speak_answer">Вимовити відповідь</string>
+
+
+    <!-- Backup screen -->
+
+    <string name="screen_title_backup">Резервне копіювання</string>
+    <string name="button_import_backup">Імпорт</string>
+    <string name="button_export_backup">Експорт</string>
+    <string name="description_import_icon">іконка \"Імпорт\"</string>
+    <string name="description_export_icon">іконка \"Експорт\"</string>
+    <string name="dialog_title_import">Імпорт</string>
+    <string name="backup_export_description">Ваша база даних буде заархівована в zip-файл.
+        Використовуйте цей файл для відновлення даних.</string>
+    <string name="backup_has_been_exported">Вашу резервну копію \'%s\' успішно експортовано</string>
+    <string name="error_while_exporting_backup">Помилка під час експорту резервної копії (%s)</string>
+    <string name="backup_import_description">Увага! Ваші поточні дані буде замінено даними з
+        резервної копії. Ми рекомендуємо вам зробити резервну копію існуючих даних, якщо вони
+        важливі для вас. Після імпорту резервної копії необхідно буде перезапустити програму.</string>
+    <string name="button_select_backup_file">Виберіть файл резервної копії</string>
+    <string name="progress_bar_importing">Імпортування ..</string>
+    <string name="button_restart">Перезапустити</string>
+    <string name="backup_has_been_imported">Вашу резервну копію успішно імпортовано</string>
+    <string name="error_while_importing_backup">Помилка під час імпорту резервної копії (%s)</string>
+
+
+    <!-- Support app screen -->
+
+    <string name="screen_title_support_app">Підтримати додаток</string>
+    <string name="cta_rate_the_app_on_google_play">Оцініть додаток на Google Play</string>
+    <string name="cta_rate_the_app_on_google_play_description">Рейтинг додатка впливає на рішення
+        людей завантажити його. Позитивний рейтинг може допомогти нам охопити більше користувачів.
+        З більшою кількістю завантаження ми зможемо отримувати зворотний зв’язок з різних точок
+        зору, що допоможе нам зробити ForgetMeNot кращим, ніж будь-коли.</string>
+    <string name="text_rate_us_button">Оцініть нас</string>
+    <string name="cta_give_us_feedback">Надішліть нам відгук</string>
+    <string name="cta_give_us_feedback_description">Розкажіть, що працює добре, а що ні. Ми хочемо
+        надати вам найкращий досвід користування, тому ваші відгуки дуже цінні. Повідомте нас, як ми
+        можемо зробити краще.</string>
+    <string name="text_write_review_on_google_play_button">Написати відгук на Google Play</string>
+    <string name="text_submit_new_issue_on_github_button">Підняти нове питання на Github</string>
+    <string name="text_send_email_to_author_button">Надіслати лист автору</string>
+    <string name="cta_help_us_with_translation">Допоможіть нам з перекладом</string>
+    <string name="cta_help_us_with_translation_description">Переклад необхідний користувачам, які
+        розмовляють іншими мовами, щоб насолоджуватися додатком. Крім того, локалізація дозволяє
+        додатку бути більш доступним та корисним для широкої аудиторії.</string>
+    <string name="text_help_translate_button">Допомогти перекласти</string>
+    <string name="cta_share_with_friends">Поділіться з друзями</string>
+    <string name="cta_share_with_friends_description">Можливо, вашим друзям потрібний додаток.
+        Поділіться з ними своїм досвідом.</string>
+    <string name="text_share_with_friends_button">Поділитися з друзями</string>
+    <string name="share_with">Поділитися з</string>
+    <string name="text_share_with_friends">Запам’ятовуйте все за допомогою флеш-карток.</string>
+    <string name="cta_join_us_on_social_media">Приєднуйтесь до нас у соціальних мережах</string>
+    <string name="cta_join_us_on_social_media_description">Отримуйте останні новини, діліться
+        цікавими статтями, задавайте питання. Долучайтесь, слідкуйте та підтримуйте зв’язок з
+        нами.</string>
+
+
+    <!-- Help screen -->
+
+    <string name="screen_title_help">Допомога</string>
+    <string name="title_articles">Статті</string>
+    <string name="help_article_title_import_of_file">Імпорт файлу</string>
+    <string name="help_article_title_exercise">Вправа</string>
+    <string name="help_article_title_testing_methods">Методи тестування</string>
+    <string name="help_article_title_grades_and_intervals">Оцінки та інтервали</string>
+    <string name="help_article_title_pronunciation">Вимова</string>
+    <string name="help_article_title_question_display">Відображення питання</string>
+    <string name="help_article_title_motivational_timer">Мотиваційний таймер</string>
+    <string name="help_article_title_walking_mode">Режим прогулянки</string>
+    <string name="help_article_title_autoplaying_cards">Автоматичне програвання карток</string>
+    <string name="help_article_title_presets">Попередньо встановленні налаштування</string>
+    <string name="help_article_title_backup">Резервне копіювання</string>
+    <string name="help_article_title_advice_on_compiling_deck">Поради щодо складання колоди</string>
+    <string name="help_article_title_advice_on_studying">Поради щодо навчання</string>
+
+
+    <!-- Help article screen -->
+
+    <string name="description_show_table_of_contents_button">Показати зміст</string>
+    <string name="description_previous_button">Попередня</string>
+    <string name="description_next_button">Наступна</string>
+    <string name="article_import_of_file_paragraph_1">ForgetMeNot може імпортувати текстові файли в
+        двох форматах:</string>
+    <string name="article_import_of_file_qa_format_section_title">1. \'Q:A:\' формат</string>
+    <string name="description_window_frame_icons">іконки віконної рами</string>
+    <string name="example_of_text_file_qa_format">Q:
+        \nЯке місто було першою столицею США?
+        \nA:
+        \nНью-Йорк
+
+        \n\n\n\nQ:
+        \nХто вперше відкрив Америку?
+        \nA:
+        \nЛейф Еріксон
+
+        \n\n\n\nQ:
+        \nХто винайшов перший автомобіль?
+        \nA:
+        \nКарл Бенц
+
+        \n\n\n\nQ:
+        \nКоли закінчилася війна за незалежність США?
+        \nA:
+        \n3 вересня 1783</string>
+    <string name="example_qa_format_file_name">Історія США.txt</string>
+    <string name="article_import_of_file_qa_format_description">Це свій власний формат ForgetMeNot.
+        Він був винайдений для ручного створення карток в текстовому файлі. Цей формат інтуїтивно
+        зрозумілий і легкий для читання. Рекомендується використовувати цей формат, якщо ви
+        складаєте картки на комп\'ютері.</string>
+    <string name="article_import_of_file_dsv_format_section_title">2. Значення, розділені розділювачем</string>
+    <string name="example_of_text_file_dsv_format">\"nature\";\"природа\"
+        \n\"beach\";\"берег, пляж\"
+        \n\"coast\";\"морське узбережжя\"
+        \n\"desert\";\"пустеля\"
+        \n\"glacier\";\"льодовик\"
+        \n\"forest\";\"ліс\"
+        \n\"field\";\"поле, луг\"
+        \n\"canyon\";\"каньйон\"
+        \n\"island\";\"острів\"
+        \n\"jungle\";\"джунглі, нетрі\"
+        \n\"lake\";\"озеро\"
+        \n\"mountain\";\"гора\"
+        \n\"hill\";\"пагорб, височина\"
+        \n\"plain\";\"рівнина\"
+        \n\"hollow\";\"низина, западина\"
+        \n\"pond\";\"ставок\"
+        \n\"rock\";\"скеля, камінь\"
+        \n\"ocean\";\"океан\"
+        \n\"sea\";\"море\"
+        \n\"river\";\"річка\"</string>
+    <string name="example_dsv_format_file_name">Природа.csv</string>
+    <string name="article_import_of_file_dsv_format_description">Це загальна назва для
+        <a href="https://uk.wikipedia.org/wiki/CSV">CSV</a> або
+        <a href="https://uk.wikipedia.org/wiki/%D0%97%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F_%D1%80%D0%BE%D0%B7%D0%B4%D1%96%D0%BB%D0%B5%D0%BD%D1%96_%D1%82%D0%B0%D0%B1%D1%83%D0%BB%D1%8F%D1%86%D1%96%D1%94%D1%8E">TSV</a>
+        файлів. Цей формат використовується для представлення табличних даних. Багато програм, такі
+        як Microsoft Excel, Google Sheets, дозволяють експортувати дані в цьому форматі. ForgetMeNot
+        інтерпретує кожен запис (рядок) як окрему картку, перший стовпець як питання, а другий - як
+        відповідь. Ви також можете створити такі файли вручну. Наприклад, створіть файл з
+        розширенням .tsv, в якому символ табуляції буде розділяти питання і відповіді.
+
+        \n\nОскільки цей формат не є строгим, вам пропонується вибрати уточнюючий формат із
+        попередньо визначених або створити свій власний.</string>
+    <string name="article_exercise_paragraph_1">У вправі слід відповідати на запитання. Для кожної
+        колоди можна вказати унікальні налаштування, які можуть суттєво змінити характер тестування:
+
+        \n\n\t- показувати картки у довільному порядку чи ні (Випадковий порядок)
+        \n\n\t- як перевіряти відповідь
+        (<annotation clickable="testing_method">Метод тестування</annotation>)
+        \n\n\t- представити питання візуально чи усно
+        (<annotation clickable="question_display">Відображення питання</annotation>,
+        <annotation clickable="pronunciation">Вимова</annotation>)
+        \n\n\t- чи вимовляти запитання та відповіді автоматично
+        (<annotation clickable="pronunciation">Вимова</annotation>)
+        \n\n\t- чи потрібно міняти питання та відповіді місцями. Звісно, це може знадобитися, якщо
+        вони взаємозамінні. (Інверсія картки)
+        \n\n\t- чи існує обмеження часу для відповіді
+        (<annotation clickable="motivational_timer">Мотиваційний таймер</annotation>)
+
+        \n\nНезалежно від <annotation clickable="testing_method">методу тестування</annotation>,
+        відповідь може бути правильною або неправильною. Якщо відповідь неправильна, картка буде
+        запитана знову, поки відповідь не буде правильною. Це потрібно для того, щоб переконатись,
+        що ви засвоїли відповідь.</string>
+    <string name="question1_in_exercise_article">Un sombrero</string>
+    <string name="answer1_in_exercise_article">Капелюх</string>
+    <string name="question2_in_exercise_article">Unos guantes</string>
+    <string name="answer2_in_exercise_article">Рукавички</string>
+    <string name="question3_in_exercise_article">Un abrigo</string>
+    <string name="answer3_in_exercise_article">Пальто</string>
+    <string name="article_exercise_paragraph_2">Ваші відповіді впливають на
+        <annotation clickable="grade">оцінку</annotation> картки. Якщо інтервали ввімкнені, оцінка
+        визначає, коли картка буде знову запитуватися.
+
+        \n\nЯкщо ви добре знаєте питання, і не хочете, щоб ця картка більше запитувалась, або ви
+        просто не хочете вивчати цю картку, натисніть на іконку \"Позначити як Вивчена\". Ця картка
+        більше ніколи не буде задаваться.</string>
+    <string name="question4_in_exercise_article">¿Cómo te llamas?</string>
+    <string name="answer4_in_exercise_article">Як вас звати?</string>
+    <string name="question5_in_exercise_article">Buenos días</string>
+    <string name="answer5_in_exercise_article">Доброго ранку</string>
+    <string name="variant2_in_exercise_article">Доброго дня</string>
+    <string name="variant3_in_exercise_article">Доброго вечора</string>
+    <string name="variant4_in_exercise_article">Надобраніч</string>
+    <string name="article_exercise_paragraph_3">Ви можете редагувати картки просто під час вправи.
+        Це може знадобитися не тільки для виправлення помилок, але і для вдосконалення картки, якщо
+        її важко запам’ятати. Ви також можете використовувати пошук, якщо ви плутаєте відповіді.
+
+        \n\nУ вправі доступні два типи підказок:
+
+        \n\n\t- \"Замаскувати літери\". Цю підказку можна застосовувати багато разів. Коли ви
+        вперше звернетесь до підказки, усі літери будуть замінені замаскованим символом ■. Ви
+        можете побачити, скільки слів має відповідь, скільки букв у кожному слові. Якщо цього
+        недостатньо, ви можете розкрити частину відповіді. Просто виберіть фрагмент та натисніть
+        \"Розкрити обраний фрагмент\" у спливаючому вікні підказки.
+
+        \n\n\t- \"Отримати варіанти\". На вибір буде надано чотири варіанти. Варіанти беруться з
+        колоди, якій належить картка. Цей підказка може значно полегшити відповідь, якщо колода не
+        призначена для методу \"Тестування з варіантами\".</string>
+    <string name="article_exercise_paragraph_4">Ви також можете виконувати вправу, не дивлячись на
+        екран в <annotation clickable="walking_mode">\"Режимі прогулянки\"</annotation>.</string>
+    <string name="article_testing_methods_paragraph_1">Методи тестування визначають спосіб
+        перевірки відповіді. Є 4 варіанти:</string>
+    <string name="article_testing_methods_off_section_title">1. Без тестування</string>
+    <string name="question_example_off_testing_method">All the children in this class are very polite.</string>
+    <string name="answer_example_off_testing_method">Всі діти в цьому класі дуже ввічливі.</string>
+    <string name="article_testing_methods_off_section_description">Його можна використовувати для
+        колод, з якими ви не плануєте працювати довгий час. Наприклад, це може бути колода, яка
+        містить речення рідною та іноземною мовами, і ви хочете одноразово поперекладати без
+        подальшого повторення.</string>
+    <string name="article_testing_methods_manual_section_title">2. Самотестування</string>
+    <string name="question_example_manual_testing_method">mime\n\n\\verb\\</string>
+    <string name="answer_example_manual_testing_method">[maɪm]\n\nuse gesture and movement without
+        words in the acting of a play or role</string>
+    <string name="article_testing_methods_manual_section_description">Основний метод тестування.
+        Ви самі вирішуєте, пам’ятаєте відповідь чи ні. Головна перевага - ефективність
+        запам’ятовування.</string>
+    <string name="article_testing_methods_quiz_section_title">3. Тестування з варіантами</string>
+    <string name="question_example_quiz_testing_method">окунь</string>
+    <string name="answer_example_quiz_testing_method_variant1">herring</string>
+    <string name="answer_example_quiz_testing_method_variant2">trout</string>
+    <string name="answer_example_quiz_testing_method_variant3">salmon</string>
+    <string name="answer_example_quiz_testing_method_variant4">bass</string>
+    <string name="article_testing_methods_quiz_section_description">У цьому режимі вам потрібно
+        вибрати правильний варіант із чотирьох запропонованих. Варіанти беруться з колоди, якій
+        належить картка. Тому, якщо ви збираєтеся використовувати цей метод тестування, важливо
+        створити колоду, де варіанти будуть доречні. Наприклад, це може бути колода типу
+        \"слово-переклад\" з однаковими частинами мови. Це більш розважальна форма тестування, тому
+        вона чудово підійде дітям. Недоліком є середня ефективність запам’ятовування, оскільки
+        варіанти представляють собой значну підказку.</string>
+    <string name="article_testing_methods_entry_section_title">4. Перевірка правопису</string>
+    <string name="question_example_entry_testing_method">Past participle form of \'bring\'</string>
+    <string name="answer_example_entry_testing_method">brought</string>
+    <string name="article_testing_methods_entry_section_description">Цей метод буде корисним, якщо
+        ви хочете перевірити правопис слів. Його також можна використовувати як диктант. Для цього
+        створіть колоду, де питання та відповідь будуть однаковими, вимкніть відображення запитань,
+        виберіть мову та ввімкніть автоматичну вимову питання в налаштуваннях колоди.</string>
+    <string name="article_grade_and_intervals_paragraph1">Кожна картка характеризується оцінкою.
+        Кожна відповідь у вправі впливає на оцінку відповідно до налаштувань \'Оцінювання\'.
+        Ви можете налаштувати оцінювання в налаштуваннях колоди. За замовчуванням оцінки
+        змінюються наступним чином:
+
+        \n\n\t- зменшується на одиницю для кожної неправильної відповіді, але не менше нуля
+
+        \n\n\t- збільшується на одиницю, якщо відповідь - правильна, але лише в тому випадку, якщо
+        картка відповідається вперше у цій сесії вправи
+
+        \n\n\t- не змінюється, якщо відповідь правильна, але ця картка була відправлена на повторне
+        опитування через неправильну відповідь попереднього разу</string>
+    <string name="question_in_grade_and_intervals_article">цинк</string>
+    <string name="answer_in_grade_and_intervals_article">zinc</string>
+    <string name="article_grade_and_intervals_paragraph2">Оцінка має безпосереднє відношення до
+        інтервалів, які застосовуються до колоди. Інтервали впливають на те, коли картка стане
+        доступною для вправи наступного разу після відповіді. Зазвичай, чим вища оцінка, тим
+        триваліший інтервал. Тобто інтервали потрібні для того, щоб ви більше мали справу з
+        недостатньо-вивченими картами і менше з добре-вивченими.
+
+        \n\nМожливо, з якихось причин ви захочете змінити оцінку. Просто натисніть на іконку
+        \"Оцінка\" і виберіть потрібну. Зазвичай, коли ви змінюєте оцінку, ви хочете уточнити,
+        скільки часу потрібно, щоб ця картка була знову запитана. Якщо ви вручну змінили оцінку,
+        стандартна схема не застосовується до цієї картки протягом цього заняття.</string>
+    <string name="article_question_display_paragraph_1">Ви можете вимкнути відображення запитань.
+        У цьому випадку передбачається, що ви будете отримувати запитання за допомогою відтворення
+        голосу. Це допоможе покращити ваші навички аудіювання під час вивчення іноземної мови.
+        Разом із цим доречно включити автоматичну вимову запитання. Якщо ви все ще хочете побачити
+        запитання, просто натисніть \"Показати питання\".</string>
+    <string name="question_in_question_display_article">Je demande à voir un avocat!</string>
+    <string name="answer_in_question_display_article">I demand to see an avocado!</string>
+    <string name="article_motivational_timer">\"Мотиваційний таймер\" призначений для зосередження
+        вашої уваги на навчанні. Якщо він увімкнений, то у вас є деякий час, щоб відповісти на
+        питання. Якщо ви не встигнете до дедлайну, картка вважається простроченою, а відповідь
+        буде автоматично позначена як неправильна. Якщо ви встановили достатньо часу, щоб
+        відповісти, то причиною \"прострочки\" картки є те, що ви втратили концентрацію, і
+        мотиваційний таймер буде нагадувати про це. Якщо ви згадуєте відповідь і відчуваєте, що
+        вам не вистачає часу, натисніть \"Зупинити\" у спливаючому вікні таймера.</string>
+    <string name="question_in_motivational_timer_article">Скільки 0,0193 км в дециметрах?</string>
+    <string name="answer_in_motivational_timer_article">193</string>
+    <string name="article_pronunciation">Ця програма підтримує вимову тексту за допомогою TTS API,
+        що надається ОС Android. Для кожної колоди ви можете обрати мову, на якій озвучувати
+        запитання, та мову для відповіді. Тому при створенні колоди важливо використовувати окремо
+        одну мову для запитань та окрему для відповідей. Якщо ви хочете мати картки з різними
+        мовами запитань та відповідей, то вам потрібно створити окремі колоди. Рекомендується
+        завжди вказувати мови.
+
+        \n\nВи також можете ввімкнути автоматичну вимову запитання чи відповіді. Це завжди корисно
+        при вивченні мов.
+
+        \n\nЯкщо функцію \"Промовляти текст у дужках\" вимкнено, програма не буде вимовляти текст,
+        оформлений у дужки () {} [] &lt;&gt;. Тому ви можете додати будь-яку додаткову інформацію
+        в дужки, наприклад, транскрипцію слів, синонімів, слова, з якими ви часто плутаєте переклад.
+
+        \n\nДля вимовлення частини тексту, просто виділіть її та натисніть іконку \"Вимовити\".</string>
+    <string name="article_walking_mode">\"Режим прогулянки\" - це особливий режим вправи, де ви
+        можете відповідати на запитання, не дивлячись на екран. Управління здійснюється за допомогою
+        <annotation clickable="walking_mode_settings">жестів клавіш регулювання гучності</annotation>.
+        Кожна дія супроводжується вимовою, наприклад, коли ви переходите до наступної картки, буде
+        озвучено питання, а коли ви відповісте (пам’ятаю чи не пам’ятаю), прозвучить відповідь.
+
+        \n\nЦей режим можна використовувати, коли ви кудись ідете і хочете корисно використати час.
+        Саме звідси цей режим і отримав свою назву.
+
+        \n\n⚠️ Застереження:
+
+        \n\n- екран має бути увімкненим. Це пов’язано з операційною системою Android: програми
+        можуть використовувати клавіші гучності лише тоді, коли вона знаходиться на передньому плані.
+
+        \n\n- Методи \"Тестування з варіантами\" та \"Перевірка правопису\" недоречні для використання
+        в цьому режимі, а тому примусово перемикаються на \"Самотестування\".
+
+        \n\n- буде увімкнено автоматична вимова питань та відповідей. Тож не забудьте вказати
+        правильні мови в налаштуваннях вимови колоди.
+
+        \n\n- \"Мотиваційний таймер\" вимикається.</string>
+    <string name="article_autoplaying_cards">Автоматичне програвання карт - це режим, при якому
+        запитання та відповіді вимовляються по черзі. Його можна порівняти з аудіоплеєром, але
+        замість композицій відтворюються запитання та відповіді. Цей режим підходить, коли ви щось
+        робите, і водночас можете прослуховувати матеріали, наприклад, під час приготування їжі.
+
+        \n\nДля кожної колоди ви можете налаштувати план мовлення. Наприклад, вимовляти запитання
+        двічі або збільшити інтервал між запитанням та відповіддю, щоб у вас було достатньо часу,
+        аби згадати відповідь, перш ніж її почути.</string>
+    <string name="article_presets">Пресет (Попередньо встановленні налаштування) - це набір
+        налаштувань, створений заздалегідь, який можна перевикористовувати. Це потрібно, щоб
+        уникнути рутинних робіт по налаштуванню колод.
+
+        \n\nЩо означають назви налаштувань:
+
+        \n\n\tСтандартний - незмінний набір налаштувань, який використовуються за замовчуванням.
+
+        \n\n\tІндивідуальний - набір налаштувань, який застосовуються тільки для данної колоди.
+
+        \n\n\t\'Ваша назва пресету\' - збережені налаштування, якими можна спільно користуватися.
+        Будь-яка зміна цього пресету вплине на кожну колоду, до якої він застосовується.</string>
+    <string name="article_backup">ForgetMeNot підтримує функцію резервного копіювання. Це може
+        знадобитися, якщо потрібно перенести дані з одного пристрою на інший. Вам потрібно спочатку
+        експортувати резервну копію у файл зі старого пристрою, скопіювати цей файл резервної копії
+        на новий пристрій та імпортувати його туди. Резервна копія - це звичайний архів з базою
+        даних. Будьте обережні, під час імпорту всі ваші дані буде видалено та замінено даними з
+        файлу резервної копії. Якщо щось піде не так, програма спробує відновити попередню базу
+        даних, але ми все ж радимо вам зробити резервну копію поточних даних, якщо це важливо для
+        вас. Після імпортування програму потрібно перезапустити.</string>
+    <string name="article_advice_on_compiling_deck">1. Намагайтеся, щоб ваші картки були якомога
+        коротшими. Краще створити декілька, ніж складати все в одне. Наприклад, якщо ви створюєте
+        картку для запам’ятовування іноземного слова, тоді вона повинна описувати лише одне
+        тлумачення, яке може бути виражене не більше 3 словами. Ви можете додати додаткову
+        інформацію в дужки, але сама відповідь повинна бути короткою.
+
+        \n\n2. Створюйте колоди з урахуванням налаштувань, які ви збираєтесь застосувати до них.
+
+        \n\n\t- Для методу \"Тестування з варіантами\" варіанти беруться з тієї ж колоди. Тому
+        картки повинні містити відповіді, які підходять, щоб бути варіантами.
+
+        \n\n\t- У налаштуваннях вимови колоди можна вказати мову для питань і ще одну мову для
+        відповіді. Тому вам потрібно створити колоду, де для запитань використовується тільки одна
+        мова, і також одна мова для відповідей.
+
+        \n\n\t- Якщо ви хочете використовувати \"Інверсію картки\", то створюйте такі картки, щоб
+        відповідь могла виглядати як питання.
+
+        \n\n3. Якщо ви створюєте колоду у вигляді файла на своєму комп’ютері, ви можете завантажити
+        <a href="https://drive.google.com/file/d/1pfAZ6tCgNMwCfXnc-F7-Fi5f8_W5eDXT/view?usp=sharing">цей файл шаблону</a>.
+        Все, що вам потрібно зробити, це замінити \"question\" на ваше запитання, і \"answer\" -
+        на вашу відповідь. Використовуйте Copy / Paste, щоб прискорити створення. Якщо ви створюєте
+        колоду на Android-пристрої, спробуйте скористатися мультивіконним режимом.
+
+        \n\n4. Cприймайте складання колоди як частина навчального процесу. Старайтесь запам’ятати
+        все на льоту.</string>
+    <string name="article_advice_on_studying">1. Не запам’ятовуйте відповідь слово в слово.
+        Головне, щоб ви розуміли суть. Завжди візуалізуйте питання, яке задається.
+
+        \n\n2. Якщо ви вивчаєте іноземну мову, говоріть відповіді вголос. Це допоможе вам не тільки
+        правильно вимовляти слова, але й зосередитись на навчанні.
+
+        \n\n3. Користуйтесь інструментами, які допомагають зосередитись на навчанні. Використовуйте
+        <annotation clickable="motivational_timer">\"Мотиваційний таймер\"</annotation>, увімкніть
+        повноекранний режим, активуйте режим \"Не турбувати\" у налаштуваннях пристрою.
+
+        \n\n4. Якщо вам не вдається запам’ятати питання, відредагуйте картку, переформулюйте
+        питання, видаліть непотрібне у відповіді. Якщо ви плутаєте відповіді, скористайтеся пошуком
+        і знайдіть причинну картку.
+
+        \n\n5. Візьміть за правило, що раз на день у вас не повинно залишатися жодних завдань для
+        вправи.</string>
+
+
+    <!-- About screen -->
+
+    <string name="description_app_logo">Логотип додатку</string>
+    <string name="about_item_developer">Одноволов Артем</string>
+    <string name="about_item_source_code">Вихідний код</string>
+    <string name="about_item_privacy_policy">Політика конфіденційності</string>
+    <string name="toast_no_email_client">У вас немає поштового клієнта для написання листа</string>
+    <string name="toast_no_browser">У вас немає браузера, щоб відкрити URL-адресу</string>
+    <string name="forgetmenot_brief_description">ForgetMeNot призначений для запам’ятовування
+        інформації. Він базується на інтервальних повтореннях флеш-карток. Додаток підтримує вивід
+        синтезу мовлення з тексту, імпорт карток з файлу, унікальні налаштування кожної колоди та
+        багато інших цікавих функцій. Окрім традиційного тестування, також є режим автоматичного
+        програвання карт. ForgetMeNot - чудова річ для вивчення мов, і не тільки.</string>
+    <string name="developer_story_title">Історія розробника</string>
+    <string name="developer_story">Більше року тому, коли я почав вивчати іноземну мову, я вирішив
+        використовувати картки для запам’ятовування слів. Спробувавши десятки різних додатків в
+        Google Play, жоден з них не задовольнив мене повністю. Тож я вирішив створити свій власний.
+
+        \n\nПерш за все, я хотів, щоб у моїй програмі був чистий інтерфейс, щоб я міг повністю
+        зосередитись на навчанні. Мій додаток повинен був бути зручним і надзвичайно швидким, щоб я
+        міг повторювати щонайменше 10 слів за хвилину. Крім того, мої вимоги включали підтримку
+        інтервальних повторень, синтез мови, імпорт карток з файлу (адже колода може створюватися
+        на комп’ютері досить швидко за допомогою copy-paste).
+
+        \n\nПісля реалізації вимови тексту я зрозумів, що завдяки цьому я можу значно розширити
+        можливості навчального процесу. По-перше, я можу приховати текст запитання, щоб сприймати
+        текст не візуально, а на слух. Це допомогло б покращити мої навички аудіювання. По-друге,
+        під час деяких заходів я міг би повторити матеріал одночасно, якби додаток міг самостійно
+        перемикати картки. По-третє, (це дещо незвична функція), я міг відповісти на запитання,
+        коли кудись йду, не дивлячись на екран, керуючи програмою клавішами гучності. Добре, це
+        зроблено.
+
+        \n\nКрім того, я реалізував деякі прості, але важливі функції, наприклад, редагування
+        картки на ходу, перевертання карток, повторне використання налаштувань колоди та багато
+        інших. Існують також додаткові опції, які допоможуть вам зосередитись на навчанні,
+        наприклад, \"Повноекранний режим\" та \"Мотиваційний таймер\".
+
+        \n\nЧи задоволений я програмою зараз? Не зовсім. Є ще кілька ідей щодо вдосконалення. Але я
+        думаю, що на цьому етапі вона виглядає досить привабливо і може підійти багатьом людям, які
+        вивчають мови, і не тільки.
+
+        \n\nЯ жодним чином не переслідую комерційних цілей. Мій додаток абсолютно безкоштовний і з
+        відкритим кодом. Я хотів би знати, що ви думаєте про мій додаток!</string>
+    <string name="translations_title">Переклади</string>
+    <string name="thanks_to_translators">Хочу висловити величезну подяку всім (особливо людям з
+        <a href="https://www.sekinfo.org">sekinfo.org</a>), хто підтримує проект забезпечуючи
+         переклад. Ви найкращі!</string>
+    <string name="language_basque">Баскська</string>
+    <string name="language_chinese_simplified">Китайська спрощена</string>
+    <string name="language_czech">Чеська</string>
+    <string name="language_dutch">Голландська</string>
+    <string name="language_french">Французька</string>
+    <string name="language_german">Німецька</string>
+    <string name="language_greek">Грецька</string>
+    <string name="language_hindi">Хінді</string>
+    <string name="language_indonesian">Індонезійська</string>
+    <string name="language_italian">Італійська</string>
+    <string name="language_nepali">Непальська</string>
+    <string name="language_polish">Польська</string>
+    <string name="language_portuguese">Португальська</string>
+    <string name="language_portuguese_brazilian">Португальська, Бразильська</string>
+    <string name="language_russian">Російська</string>
+    <string name="language_spanish">Іспанська</string>
+    <string name="language_turkish">Турецька</string>
+    <string name="language_ukrainian">Українська</string>
+    <string name="language_vietnamese">В\'єтнамська</string>
+    <string name="text_support_app_button">Підтримати додаток</string>
+
+
+    <!-- DSV format screen -->
+
+    <string name="screen_title_dsv_format">DSV формат</string>
+    <string name="tip_dsv_format">Значення, розділені розділювачем, обробляються завдяки бібліотеці
+        <annotation clickable="csv_library">Apache Commons CSV</annotation>. Відвідайте
+        <annotation clickable="CSVFormat">цю сторінку</annotation>, щоб дізнатися більше про
+        налаштування формату.
+
+        \n\nОсобливі символи:
+        \n\t\\n - новий рядок
+        \n\t\\r - повернення каретки
+        \n\t\\t - горизонтальна табуляція</string>
+    <string name="description_delete_format_settings">Видалити налаштування формату</string>
+    <string name="dsv_format_setting_delimiter">Розділювач значень (Delimiter)</string>
+    <string name="dsv_format_setting_trailing_delimiter">Кінцевий розділювач (Trailing delimiter)</string>
+    <string name="dsv_format_setting_quote_character">Символ лапок (Quote character)</string>
+    <string name="dsv_format_setting_quote_mode">Режим лапок (Quote mode)\n(Використовується для виведення)</string>
+    <string name="dsv_format_setting_escape_character">Символ уникнення (Escape character)</string>
+    <string name="dsv_format_setting_null_string">Позначення Null-значення</string>
+    <string name="dsv_format_setting_ignore_surrounding_spaces">Ігнорувати оточенні пробіли (Ignore surrounding spaces)</string>
+    <string name="dsv_format_setting_trim">Обрізати (Trim)</string>
+    <string name="dsv_format_setting_ignore_empty_lines">Ігнорувати порожні рядки</string>
+    <string name="dsv_format_setting_record_separator">Розділювач записів (Record separator)\n(Використовується для виведення)</string>
+    <string name="dsv_format_setting_comment_character">Символ коментаря (Comment character)</string>
+    <string name="dsv_format_setting_skip_header_record">Пропускати запис заголовка</string>
+    <string name="dsv_format_setting_header_column_names">Назви стовпців заголовка</string>
+    <string name="dsv_format_setting_ignore_header_names_case">Ігнорувати регістр назв заголовків</string>
+    <string name="dsv_format_setting_allow_duplicate_header_names">Дозволити дублюючі імена заголовків</string>
+    <string name="dsv_format_setting_allow_missing_column_names">Дозволити відсутні назви стовпців</string>
+    <string name="dsv_format_setting_header_comments">Коментарі в заголовку</string>
+    <string name="dsv_format_setting_auto_flush">Автоматично скидати (Auto-flush)</string>
+    <string name="dsv_quote_mode_all">Всі</string>
+    <string name="dsv_quote_mode_all_non_null">Усі не null</string>
+    <string name="dsv_quote_mode_minimal">По мінімуму</string>
+    <string name="dsv_quote_mode_non_numeric">Нечислові</string>
+    <string name="dsv_quote_mode_none">Не використовувати</string>
+    <string name="error_message_failed_to_save_dsv_format_empty_name">Назва не вказана</string>
+    <string name="error_message_failed_to_save_dsv_format_occupied_name">Назва зайнята</string>
+    <string name="error_message_failed_to_save_dsv_format_not_valid">Формат DSV неприпустимий</string>
+    <string name="hint_enter_a_name">Введіть назву</string>
+    <string name="title_delete_dsv_format_dialog">Видалення DSV формату \'%1$s\'</string>
+    <string name="dialog_text_delete_dsv_format">Ви дійсно хочете видалити цей формат?</string>
+    <string name="message_dsv_format_is_deleted">DSV формат \'%1$s\' видалено</string>
+
+</resources>

@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/window"
+            android:orientation="horizontal"
+            android:stateListAnimator="@animator/app_bar">
+
+        <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/ripple"
+                android:contentDescription="@string/description_back_button"
+                android:tint="@color/screen_title"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/ic_round_keyboard_backspace_24" />
+
+        <TextView
+                android:id="@+id/screenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/jura"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/screen_title_settings"
+                android:textColor="@color/screen_title"
+                android:textSize="@dimen/text_size_screen_title"
+                android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <ScrollView
+            android:id="@+id/contentScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/fullscreenButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/fullscreenSettingsTitle"
+                            style="@style/SettingsItemTitle"
+                            android:text="@string/text_fullscreen_settings_title" />
+
+                    <TextView
+                            android:id="@+id/fullscreenSettingsDescription"
+                            style="@style/SettingsItemDescription"
+                            tools:text="Everywhere" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/SettingsItemNavigationIcon" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider_on_surface_with_margins" />
+
+            <LinearLayout
+                    android:id="@+id/themeButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/themeTitle"
+                            style="@style/SettingsItemTitle"
+                            android:text="@string/text_theme_settings_title" />
+
+                    <TextView
+                            android:id="@+id/themeDescription"
+                            style="@style/SettingsItemDescription"
+                            tools:text="@string/theme_dark" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/SettingsItemNavigationIcon" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider_on_surface_with_margins" />
+
+            <LinearLayout
+                    android:id="@+id/cardAppearanceButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/cardAppearanceTitle"
+                            style="@style/SettingsItemTitle"
+                            android:text="@string/text_card_appearance_settings_title" />
+
+                    <TextView
+                            android:id="@+id/cardAppearanceDescription"
+                            style="@style/SettingsItemDescription"
+                            android:text="@string/text_card_appearance_settings_description" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/SettingsItemNavigationIcon" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider_on_surface_with_margins" />
+
+            <LinearLayout
+                    android:id="@+id/exerciseButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/exerciseTitle"
+                            style="@style/SettingsItemTitle"
+                            android:text="@string/text_exercise_settings_title" />
+
+                    <TextView
+                            android:id="@+id/exerciseDescription"
+                            style="@style/SettingsItemDescription"
+                            android:text="@string/text_exercise_settings_description" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/SettingsItemNavigationIcon" />
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider_on_surface_with_margins" />
+
+            <LinearLayout
+                    android:id="@+id/walkingModeButton"
+                    style="@style/SettingsItemButton">
+
+                <LinearLayout style="@style/SettingsTextColumn">
+
+                    <TextView
+                            android:id="@+id/walkingModeSettingsTitle"
+                            style="@style/SettingsItemTitle"
+                            android:text="@string/text_walking_mode_title" />
+
+                    <TextView
+                            android:id="@+id/walkingModeSettingsDescription"
+                            style="@style/SettingsItemDescription"
+                            android:text="@string/text_walking_mode_settings_description" />
+
+                </LinearLayout>
+
+                <ImageView style="@style/SettingsItemNavigationIcon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

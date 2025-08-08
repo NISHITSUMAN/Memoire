@@ -1,0 +1,575 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@+id/nav_host">
+
+    <fragment
+            android:id="@+id/nav_host"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.navhost.NavHostFragment"
+            tools:layout="@layout/fragment_nav_host">
+
+        <action
+                android:id="@+id/nav_host_to_cards_import"
+                app:destination="@+id/cards_import" />
+
+        <action
+                android:id="@+id/nav_host_to_card_filter_for_exercise"
+                app:destination="@+id/card_filter_for_exercise" />
+
+        <action
+                android:id="@+id/nav_host_to_exercise"
+                app:destination="@id/exercise" />
+
+        <action
+                android:id="@+id/nav_host_to_deck_chooser"
+                app:destination="@+id/deck_chooser" />
+
+        <action
+                android:id="@+id/nav_host_to_cards_editor"
+                app:destination="@id/cards_editor" />
+
+        <action
+                android:id="@+id/nav_host_to_deck_editor"
+                app:destination="@id/deck_editor" />
+
+        <action
+                android:id="@+id/nav_host_shows_rename_deck_dialog"
+                app:destination="@+id/rename_deck_dialog" />
+
+        <action
+                android:id="@+id/nav_host_to_card_filter_for_autoplay"
+                app:destination="@id/card_filter_for_autoplay" />
+
+        <action
+                android:id="@+id/nav_host_to_exercise_settings"
+                app:destination="@+id/exercise_settings"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/nav_host_to_walking_mode_settings"
+                app:destination="@+id/walking_mode_settings"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/nav_host_to_help_article"
+                app:destination="@id/help_article" />
+
+        <action
+                android:id="@+id/nav_host_to_cards_export"
+                app:destination="@+id/cards_export" />
+
+        <action
+                android:id="@+id/show_change_grade_dialog_from_nav_host"
+                app:destination="@+id/change_grade_dialog" />
+
+        <action
+                android:id="@+id/nav_host_to_deck_lists_editor"
+                app:destination="@+id/deck_lists_editor" />
+
+        <action
+                android:id="@+id/nav_host_to_card_appearance"
+                app:destination="@+id/card_appearance"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/show_backup_export_dialog"
+                app:destination="@+id/backup_export_dialog" />
+
+        <action
+                android:id="@+id/show_backup_import_dialog"
+                app:destination="@+id/backup_import_dialog" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/cards_import"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardsimport.CardsImportFragment"
+            tools:layout="@layout/fragment_cards_import">
+
+        <action
+                android:id="@+id/cards_import_shows_rename_deck_dialog"
+                app:destination="@+id/rename_deck_dialog" />
+
+        <action
+                android:id="@+id/cards_import_to_deck_chooser"
+                app:destination="@id/deck_chooser" />
+
+        <action
+                android:id="@+id/cards_import_to_dsv_format"
+                app:destination="@id/dsv_format" />
+
+        <action
+                android:id="@+id/cards_import_to_deck_editor"
+                app:destination="@+id/deck_editor"
+                app:popUpTo="@+id/cards_import"
+                app:popUpToInclusive="true" />
+
+        <action
+                android:id="@+id/cards_import_to_help"
+                app:destination="@+id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/deck_chooser"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.deckchooser.DeckChooserFragment"
+            tools:layout="@layout/fragment_deck_chooser">
+
+        <action
+                android:id="@+id/show_rename_deck_dialog_from_deck_chooser"
+                app:destination="@+id/rename_deck_dialog" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/dsv_format"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.dsvformat.DsvFormatFragment"
+            tools:layout="@layout/fragment_dsv_format" />
+
+    <fragment
+            android:id="@+id/search"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.search.SearchFragment"
+            tools:layout="@layout/fragment_search">
+
+        <action
+                android:id="@+id/search_to_cards_editor"
+                app:destination="@+id/cards_editor"
+                app:popUpTo="@+id/search"
+                app:popUpToInclusive="true" />
+
+        <action
+                android:id="@+id/show_change_grade_dialog_from_search"
+                app:destination="@+id/change_grade_dialog" />
+
+        <action
+                android:id="@+id/search_to_deck_chooser"
+                app:destination="@+id/deck_chooser" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/exercise"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.exercise.ExerciseFragment"
+            tools:layout="@layout/fragment_exercise">
+
+        <action
+                android:id="@+id/exercise_to_deck_editor"
+                app:destination="@id/deck_editor" />
+
+        <action
+                android:id="@+id/exercise_to_cards_editor"
+                app:destination="@id/cards_editor" />
+
+        <action
+                android:id="@+id/exercise_to_search"
+                app:destination="@+id/search" />
+
+        <action
+                android:id="@+id/exercise_to_walking_mode_settings"
+                app:destination="@id/walking_mode_settings" />
+
+        <action
+                android:id="@+id/exercise_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/deck_editor"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.deckeditor.DeckEditorFragment"
+            tools:layout="@layout/fragment_deck_editor">
+
+        <action
+                android:id="@+id/deck_editor_shows_rename_deck_dialog"
+                app:destination="@+id/rename_deck_dialog" />
+
+        <action
+                android:id="@+id/deck_editor_to_pronunciation"
+                app:destination="@id/pronunciation"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_card_inversion"
+                app:destination="@id/card_inversion"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_question_display"
+                app:destination="@id/question_display"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_testing_method"
+                app:destination="@id/testing_method"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_intervals"
+                app:destination="@id/intervals"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_grading"
+                app:destination="@id/grading"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_pronunciation_plan"
+                app:destination="@id/pronunciation_plan"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_motivational_timer"
+                app:destination="@id/motivational_timer"
+                app:enterAnim="@anim/slide_in_left"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+                android:id="@+id/deck_editor_to_cards_export"
+                app:destination="@+id/cards_export" />
+
+        <action
+                android:id="@+id/deck_editor_to_search"
+                app:destination="@+id/search" />
+
+        <action
+                android:id="@+id/deck_editor_to_deck_chooser"
+                app:destination="@+id/deck_chooser" />
+
+        <action
+                android:id="@+id/deck_editor_to_cards_editor"
+                app:destination="@+id/cards_editor" />
+
+        <action
+                android:id="@+id/show_change_grade_dialog_from_deck_editor"
+                app:destination="@+id/change_grade_dialog" />
+
+        <action
+                android:id="@+id/deck_editor_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/rename_deck_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.renamedeck.RenameDeckDialog"
+            tools:layout="@layout/dialog_input">
+
+        <action
+                android:id="@+id/rename_deck_dialog_to_cards_editor"
+                app:destination="@+id/cards_editor" />
+
+    </dialog>
+
+    <fragment
+            android:id="@+id/pronunciation"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.pronunciation.PronunciationFragment"
+            tools:layout="@layout/fragment_pronunciation">
+
+        <action
+                android:id="@+id/pronunciation_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/card_inversion"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardinversion.CardInversionFragment"
+            tools:layout="@layout/fragment_card_inversion" />
+
+    <fragment
+            android:id="@+id/question_display"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.questiondisplay.QuestionDisplayFragment"
+            tools:layout="@layout/fragment_question_display">
+
+        <action
+                android:id="@+id/question_display_to_help_article"
+                app:destination="@+id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/testing_method"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.testingmethod.TestingMethodFragment"
+            tools:layout="@layout/fragment_testing_method">
+
+        <action
+                android:id="@+id/testing_method_to_help_article"
+                app:destination="@+id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/intervals"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.intervals.IntervalsFragment"
+            tools:layout="@layout/fragment_intervals">
+
+        <action
+                android:id="@+id/show_modify_interval_dialog"
+                app:destination="@+id/modify_interval_dialog" />
+
+        <action
+                android:id="@+id/intervals_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/modify_interval_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.intervals.modifyinterval.ModifyIntervalDialog"
+            tools:layout="@layout/dialog_modify_interval" />
+
+    <fragment
+            android:id="@+id/motivational_timer"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.motivationaltimer.MotivationalTimerFragment"
+            tools:layout="@layout/fragment_motivational_timer">
+
+        <action
+                android:id="@+id/motivational_timer_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/pronunciation_plan"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.pronunciationplan.PronunciationPlanFragment"
+            tools:layout="@layout/fragment_pronunciation_plan">
+
+        <action
+                android:id="@+id/show_pronunciation_event_dialog"
+                app:destination="@+id/pronunciation_event_dialog" />
+
+        <action
+                android:id="@+id/pronunciation_plan_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/pronunciation_event_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.pronunciationplan.PronunciationEventDialog"
+            tools:layout="@layout/dialog_pronunciation_event" />
+
+    <fragment
+            android:id="@+id/cards_editor"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardseditor.CardsEditorFragment"
+            android:layout="@layout/fragment_cards_editor">
+
+        <action
+                android:id="@+id/cards_editor_to_deck_editor"
+                app:destination="@+id/deck_editor"
+                app:popUpTo="@+id/cards_editor"
+                app:popUpToInclusive="true" />
+
+        <action
+                android:id="@+id/cards_editor_to_deck_chooser"
+                app:destination="@+id/deck_chooser" />
+
+        <action
+                android:id="@+id/cards_editor_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/walking_mode_settings"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.walkingmodesettings.WalkingModeSettingsFragment"
+            tools:layout="@layout/fragment_walking_mode_settings">
+
+        <action
+                android:id="@+id/walking_mode_settings_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/card_appearance"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardappearance.CardAppearanceFragment"
+            tools:layout="@layout/fragment_card_appearance" />
+
+    <fragment
+            android:id="@+id/help_article"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.helparticle.HelpArticleContainerFragment"
+            tools:layout="@layout/fragment_help_article_container">
+
+        <action
+                android:id="@+id/help_article_to_walking_mode_settings"
+                app:destination="@+id/walking_mode_settings" />
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/card_filter_for_autoplay"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardfilterforautoplay.CardFilterForAutoplayFragment"
+            tools:layout="@layout/fragment_card_filter_for_autoplay">
+
+        <action
+                android:id="@+id/card_filter_to_player"
+                app:destination="@+id/player"
+                app:popUpTo="@+id/card_filter_for_autoplay"
+                app:popUpToInclusive="true" />
+
+        <action
+                android:id="@+id/card_filter_for_autoplay_to_last_tested_filter_dialog"
+                app:destination="@+id/last_tested_filter_dialog" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/last_tested_filter_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.lasttested.LastTestedFilterDialog"
+            tools:layout="@layout/dialog_last_tested_filter" />
+
+    <fragment
+            android:id="@+id/player"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.player.view.PlayerFragment"
+            tools:layout="@layout/fragment_player">
+
+        <action
+                android:id="@+id/player_to_deck_editor"
+                app:destination="@+id/deck_editor" />
+
+        <action
+                android:id="@+id/player_to_cards_editor"
+                app:destination="@id/cards_editor" />
+
+        <action
+                android:id="@+id/player_to_search"
+                app:destination="@+id/search" />
+
+        <action
+                android:id="@+id/show_laps_in_player_dialog"
+                app:destination="@+id/laps_in_player_dialog" />
+
+        <action
+                android:id="@+id/player_to_help_article"
+                app:destination="@id/help_article" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/laps_in_player_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.player.view.laps.LapsInPlayerDialog"
+            tools:layout="@layout/dialog_laps_in_player" />
+
+    <dialog
+            android:id="@+id/cards_export"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardsexport.CardsExportDialog"
+            tools:layout="@layout/dialog_cards_export" />
+
+    <dialog
+            android:id="@+id/change_grade_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.changegrade.ChangeGradeDialog"
+            tools:layout="@layout/dialog_change_grade" />
+
+    <fragment
+            android:id="@+id/deck_lists_editor"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.decklistseditor.DeckListsEditorFragment"
+            tools:layout="@layout/fragment_deck_lists_editor" />
+
+    <fragment
+            android:id="@+id/exercise_settings"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.exercisesettings.ExerciseSettingsFragment"
+            tools:layout="@layout/fragment_exercise_settings">
+
+        <action
+                android:id="@+id/show_cards_threshold_dialog"
+                app:destination="@+id/cards_threshold_dialog" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/cards_threshold_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.exercisesettings.CardThresholdDialog"
+            tools:layout="@layout/dialog_cards_threshold_for_showing_filter" />
+
+    <fragment
+            android:id="@+id/card_filter_for_exercise"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardfilterforexercise.CardFilterForExerciseFragment"
+            tools:layout="@layout/fragment_card_filter_for_exercise">
+
+        <action
+                android:id="@+id/card_filter_to_exercise"
+                app:destination="@+id/exercise"
+                app:popUpTo="@+id/card_filter_for_exercise"
+                app:popUpToInclusive="true" />
+
+        <action
+                android:id="@+id/show_card_limit_dialog"
+                app:destination="@+id/card_limit_dialog" />
+
+        <action
+                android:id="@+id/card_filter_for_exercise_to_last_tested_filter_dialog"
+                app:destination="@+id/last_tested_filter_dialog" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/card_limit_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.cardfilterforexercise.cardlimit.CardLimitDialog"
+            tools:layout="@layout/dialog_card_limit" />
+
+    <fragment
+            android:id="@+id/grading"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.grading.GradingFragment"
+            tools:layout="@layout/fragment_grading">
+
+        <action
+                android:id="@+id/grading_to_help_article"
+                app:destination="@id/help_article" />
+
+        <action
+                android:id="@+id/show_change_grading_dialog"
+                app:destination="@+id/change_grading_dialog" />
+
+    </fragment>
+
+    <dialog
+            android:id="@+id/change_grading_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.grading.ChangeGradingDialog"
+            tools:layout="@layout/dialog_choice" />
+
+    <dialog
+            android:id="@+id/backup_export_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.backup.export.BackupExportDialog"
+            tools:layout="@layout/dialog_backup_export" />
+
+    <dialog
+            android:id="@+id/backup_import_dialog"
+            android:name="com.odnovolov.forgetmenot.presentation.screen.backup.import.BackupImportDialog"
+            tools:layout="@layout/dialog_backup_import" />
+
+</navigation>

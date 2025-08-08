@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/articleContentTextView"
+            style="@style/ArticleParagraph"
+            android:text="@string/article_motivational_timer" />
+
+    <include
+            android:id="@+id/offTestExerciseCardExample"
+            layout="@layout/item_exercise_card_off_test"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/control_panel"
+            android:elevation="2dp">
+
+        <ImageButton
+                android:id="@+id/timerButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/ripple_on_control_panel"
+                android:contentDescription="@string/description_timer_button" />
+
+    </FrameLayout>
+
+</LinearLayout>

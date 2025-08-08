@@ -1,0 +1,108 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        tools:background="@drawable/background_popup_dark"
+        tools:elevation="20dp"
+        tools:layout_gravity="center">
+
+    <ImageView
+            android:id="@+id/walkingModeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/description_walking_mode_icon"
+            android:src="@drawable/ic_round_directions_walk_24"
+            android:tintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="@id/title"
+            app:layout_constraintEnd_toStartOf="@+id/title"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title"
+            android:tint="@color/icon_walking_mode_on_popup" />
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/popup_title_walking_mode"
+            android:textColor="@color/title_on_dark_popup"
+            android:textSize="@dimen/text_size_popup_in_exercise_title"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/walkingModeIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/divider_on_dark_popup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <ImageButton
+            android:id="@+id/walkingModeSettingsButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ripple_on_control_panel"
+            android:contentDescription="@string/description_walking_mode_settings_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/walkingModeHelpButton"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            android:tint="@color/icon_on_control_panel"
+            android:tintMode="src_in"
+            app:srcCompat="@drawable/ic_round_settings_24" />
+
+    <ImageButton
+            android:id="@+id/walkingModeHelpButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ripple_on_control_panel"
+            android:contentDescription="@string/description_help_button"
+            android:tint="@color/icon_on_control_panel"
+            android:tintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/walkingModeSwitchButton"
+            app:layout_constraintStart_toEndOf="@+id/walkingModeSettingsButton"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:srcCompat="@drawable/ic_round_help_outline_24" />
+
+    <FrameLayout
+            android:id="@+id/walkingModeSwitchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/walkingModeHelpButton"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/walkingModeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:padding="8dp"
+                android:theme="@style/WalkingModeSwitchStyle"
+                tools:checked="true" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

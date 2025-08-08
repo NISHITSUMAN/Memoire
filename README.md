@@ -1,4 +1,4 @@
-![Header](/.github/readme/fmn_header.png)
+![Header](/.github/readme/fmn_header.jpeg)
 
 <h1 align="center">Memoire</h1>
 
